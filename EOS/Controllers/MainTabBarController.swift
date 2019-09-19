@@ -1,0 +1,190 @@
+//
+//  MainTabBarController.swift
+//  EOS
+//
+//  Created by Patrick Holmes on 9/4/19.
+//  Copyright © 2019 Patrick Holmes. All rights reserved.
+//
+
+import UIKit
+
+class MainTabBarController: UITabBarController {
+    
+    let layerGradient = CAGradientLayer()
+    var circle: UIView?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let numberOfItems = CGFloat(5)
+        let tabBarItemSize = CGSize(width: (tabBar.frame.width / numberOfItems) - 20, height: tabBar.frame.height)
+        circle = UIView(frame: CGRect(x: 0, y: 0, width: (tabBarItemSize.height)+20, height: (tabBarItemSize.height)+20))
+        circle?.backgroundColor = UIColor(red: 60.0 / 255.0, green: 78.0 / 255.0, blue: 91.0 / 255.0, alpha: 1.0)
+        circle?.layer.cornerRadius = circle!.frame.width/2
+        circle?.alpha = 0
+        tabBar.addSubview(circle!)
+        tabBar.sendSubviewToBack(circle!)
+
+        delegate = self
+        
+        let blogController = UINavigationController(rootViewController: BlogViewController())
+        blogController.tabBarItem.title = "Blog"
+        blogController.tabBarItem.image = #imageLiteral(resourceName: "blog")
+        blogController.tabBarItem.imageInsets = UIEdgeInsets(top: 7, left: 0, bottom: -7, right: 0)
+        
+        let podcastController = PodcastViewController()
+        podcastController.tabBarItem.title = "Podcast"
+        podcastController.tabBarItem.image = #imageLiteral(resourceName: "podcast")
+        podcastController.tabBarItem.imageInsets = UIEdgeInsets(top: 8, left: 0, bottom: -8, right: 0)
+        
+        let meditationController = UINavigationController(rootViewController: MeditationViewController())
+        meditationController.tabBarItem.title = "Meditation"
+        meditationController.tabBarItem.image = #imageLiteral(resourceName: "meditation")
+        meditationController.tabBarItem.imageInsets = UIEdgeInsets(top: 8, left: 0, bottom: -8, right: 0)
+        
+        let goalSetterController = GoalSetterViewController()
+        goalSetterController.tabBarItem.title = "Goal Setter"
+        goalSetterController.tabBarItem.image = #imageLiteral(resourceName: "goalSetter")
+        goalSetterController.tabBarItem.imageInsets = UIEdgeInsets(top: 8, left: 0, bottom: -8, right: 0)
+        
+        let shopController = ShopViewController()
+        shopController.tabBarItem.title = "Shop"
+        shopController.tabBarItem.image = #imageLiteral(resourceName: "shop")
+        shopController.tabBarItem.imageInsets = UIEdgeInsets(top: 8, left: 0, bottom: -8, right: 0)
+        
+        UITabBarItem.appearance().titlePositionAdjustment = UIOffset(horizontal: 0, vertical: 10)
+        
+        viewControllers = [
+            blogController,
+            podcastController,
+            goalSetterController,
+            meditationController,
+            shopController
+        ]
+        
+        layerGradient.colors = [UIColor(red: 4.0 / 255.0, green: 7.0 / 255.0, blue: 16.0 / 255.0, alpha: 1.0).cgColor, UIColor(red: 16.0 / 255.0, green: 43.0 / 255.0, blue: 103.0 / 255.0, alpha: 1.0).cgColor]
+        layerGradient.startPoint = CGPoint(x: 0, y: 0)
+        layerGradient.endPoint = CGPoint(x: 0, y: 0.1)
+        layerGradient.frame = CGRect(x: 0, y: 0, width: view.bounds.width, height: view.bounds.height)
+        self.tabBar.layer.insertSublayer(layerGradient, at:0)
+        self.tabBar.layer.masksToBounds = true
+        self.tabBar.layer.cornerRadius = 30
+        self.tabBar.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        let index = -(tabBar.items?.firstIndex(of: tabBar.selectedItem!)?.distance(to: 0))!
+        let frame = frameForTabAtIndex(index: index)
+        circle?.center.x = frame.origin.x + frame.width/2
+        circle?.center.y = (frame.origin.y)-2 + frame.height
+        circle?.alpha = 1
+    }
+    
+    func frameForTabAtIndex(index: Int) -> CGRect {
+        var frames = tabBar.subviews.compactMap { (view:UIView) -> CGRect? in
+            if let view = view as? UIControl {
+                for item in view.subviews {
+                    if let image = item as? UIImageView {
+                        return image.superview!.convert(image.frame, to: tabBar)
+                    }
+                }
+                return view.frame
+            }
+            return nil
+        }
+        frames.sort { $0.origin.x < $1.origin.x }
+        if frames.count > index {
+            return frames[index]
+        }
+        return frames.last ?? CGRect.zero
+    }
+
+}
+
+
+
+extension MainTabBarController: UITabBarControllerDelegate {
+    
+    override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+        
+//        let index = self.tabBar.items?.firstIndex(of: item)
+//        let subView = tabBar.subviews[index!+1].subviews.first as! UIImageView
+//        self.performSpringAnimation(imgView: subView)
+        let index1 = -(tabBar.items?.firstIndex(of: item)?.distance(to: 0))!
+        let frame = frameForTabAtIndex(index: index1)
+        self.circle?.center.x = frame.origin.x + frame.width/2
+    }
+    
+    func performSpringAnimation(imgView: UIImageView) {
+        
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: .curveEaseInOut, animations: {
+            
+            imgView.transform = CGAffineTransform.init(scaleX: 1.2, y: 1.2)
+            
+            //reducing the size
+            UIView.animate(withDuration: 0.5, delay: 0.2, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: .curveEaseInOut, animations: {
+                imgView.transform = CGAffineTransform.init(scaleX: 1, y: 1)
+            }) { (flag) in
+            }
+        }) { (flag) in
+            
+        }
+    }
+    
+    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
+        guard
+            let tabViewControllers = tabBarController.viewControllers,
+            let targetIndex = tabViewControllers.firstIndex(of: viewController),
+            let targetView = tabViewControllers[targetIndex].view,
+            let currentViewController = selectedViewController,
+            let currentIndex = tabViewControllers.firstIndex(of: currentViewController)
+            else { return false }
+        
+        if currentIndex != targetIndex {
+            animateToView(targetView, at: targetIndex, from: currentViewController.view, at: currentIndex)
+        }
+        
+        return true
+    }
+    
+}
+
+private extension MainTabBarController {
+    
+    func animateToView(_ toView: UIView, at toIndex: Int, from fromView: UIView, at fromIndex: Int) {
+        // Position toView off screen (to the left/right of fromView)
+        let screenWidth = UIScreen.main.bounds.size.width
+        let offset = toIndex > fromIndex ? screenWidth : -screenWidth
+        
+        toView.frame.origin = CGPoint(
+            x: toView.frame.origin.x + offset,
+            y: toView.frame.origin.y
+        )
+        
+        fromView.superview?.addSubview(toView)
+        
+        // Disable interaction during animation
+        view.isUserInteractionEnabled = false
+        
+        UIView.animate(
+            withDuration: 0.5,
+            delay: 0.0,
+            usingSpringWithDamping: 0.75,
+            initialSpringVelocity: 0.5,
+            options: .curveEaseInOut,
+            animations: {
+                // Slide the views by -offset
+                fromView.center = CGPoint(x: fromView.center.x - offset, y: fromView.center.y)
+                toView.center = CGPoint(x: toView.center.x - offset, y: toView.center.y)
+        },
+            completion: { _ in
+                // Remove the old view from the tabbar view.
+                fromView.removeFromSuperview()
+                self.selectedIndex = toIndex
+                self.view.isUserInteractionEnabled = true
+        }
+        )
+    }
+    
+}

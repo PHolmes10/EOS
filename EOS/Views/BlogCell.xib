@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="283" id="GnH-rG-Kz0" customClass="BlogCell" customModule="EOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="594" height="283"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GnH-rG-Kz0" id="Cgc-QO-jgH">
+                <rect key="frame" x="0.0" y="0.0" width="594" height="282.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cellBackground" translatesAutoresizingMaskIntoConstraints="NO" id="zzW-VE-Jjt">
+                        <rect key="frame" x="10" y="12" width="574" height="264.5"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="15"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="blogTitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AR9-eN-quX">
+                        <rect key="frame" x="30" y="218.5" width="82.5" height="24"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="blogAuthor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8dW-dH-Zo7">
+                        <rect key="frame" x="30" y="244" width="66" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="zzW-VE-Jjt" firstAttribute="leading" secondItem="Cgc-QO-jgH" secondAttribute="leading" constant="10" id="167-lu-sje"/>
+                    <constraint firstItem="8dW-dH-Zo7" firstAttribute="leading" secondItem="Cgc-QO-jgH" secondAttribute="leading" constant="30" id="4E2-LT-1sM"/>
+                    <constraint firstAttribute="bottom" secondItem="8dW-dH-Zo7" secondAttribute="bottom" constant="24" id="HwF-Kw-65s"/>
+                    <constraint firstAttribute="trailing" secondItem="zzW-VE-Jjt" secondAttribute="trailing" constant="10" id="O1n-zT-7pO"/>
+                    <constraint firstItem="AR9-eN-quX" firstAttribute="leading" secondItem="Cgc-QO-jgH" secondAttribute="leading" constant="30" id="XOg-9J-wxu"/>
+                    <constraint firstItem="zzW-VE-Jjt" firstAttribute="top" secondItem="Cgc-QO-jgH" secondAttribute="top" constant="12" id="Z8x-MQ-hLF"/>
+                    <constraint firstAttribute="bottom" secondItem="AR9-eN-quX" secondAttribute="bottom" constant="40" id="j7I-IN-83s"/>
+                    <constraint firstAttribute="bottom" secondItem="zzW-VE-Jjt" secondAttribute="bottom" constant="6" id="u4y-nR-oDI"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="blogAuthorLabel" destination="8dW-dH-Zo7" id="bhq-gw-Cwj"/>
+                <outlet property="blogCellImageView" destination="zzW-VE-Jjt" id="V7b-Pv-h8S"/>
+                <outlet property="blogTitleLabel" destination="AR9-eN-quX" id="bIJ-w5-H7a"/>
+            </connections>
+            <point key="canvasLocation" x="236.23188405797103" y="88.058035714285708"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="cellBackground" width="922" height="478"/>
+    </resources>
+</document>
