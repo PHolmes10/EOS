@@ -71,8 +71,6 @@ public class ITunesCategory {
     /// The iTunes SubCategory.
     public var subcategory: ITunesSubCategory?
     
-    public init() { }
-    
 }
 
 // MARK: - Initializers

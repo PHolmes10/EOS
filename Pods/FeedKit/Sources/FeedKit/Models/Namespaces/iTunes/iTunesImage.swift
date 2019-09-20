@@ -62,8 +62,6 @@ public class ITunesImage {
     /// The element's attributes.
     public var attributes: Attributes?
     
-    public init() { }
-    
 }
 
 // MARK: - Initializers

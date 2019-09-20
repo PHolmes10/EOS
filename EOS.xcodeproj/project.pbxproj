@@ -37,6 +37,11 @@
 		BD56795B233321B6000D0C02 /* Podcast.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD56795A233321B6000D0C02 /* Podcast.swift */; };
 		BD56795D2333D80C000D0C02 /* BlogDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD56795C2333D80C000D0C02 /* BlogDetailView.xib */; };
 		BD56795F23341B25000D0C02 /* BlogDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD56795E23341B25000D0C02 /* BlogDetailView.swift */; };
+		BDC049C723357EE900E76E4A /* EpisodeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDC049C223357EE800E76E4A /* EpisodeTableViewCell.xib */; };
+		BDC049C823357EE900E76E4A /* EpisodeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC049C323357EE800E76E4A /* EpisodeTableViewCell.swift */; };
+		BDC049C923357EE900E76E4A /* PlayerDetailsView+Gestures.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC049C423357EE900E76E4A /* PlayerDetailsView+Gestures.swift */; };
+		BDC049CA23357EE900E76E4A /* PlayerDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC049C523357EE900E76E4A /* PlayerDetailsView.swift */; };
+		BDC049CB23357EE900E76E4A /* PlayerDetailsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDC049C623357EE900E76E4A /* PlayerDetailsView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +78,11 @@
 		BD56795A233321B6000D0C02 /* Podcast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Podcast.swift; sourceTree = "<group>"; };
 		BD56795C2333D80C000D0C02 /* BlogDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = BlogDetailView.xib; path = EOS/Views/BlogDetailView.xib; sourceTree = SOURCE_ROOT; };
 		BD56795E23341B25000D0C02 /* BlogDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogDetailView.swift; sourceTree = "<group>"; };
+		BDC049C223357EE800E76E4A /* EpisodeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EpisodeTableViewCell.xib; sourceTree = "<group>"; };
+		BDC049C323357EE800E76E4A /* EpisodeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EpisodeTableViewCell.swift; sourceTree = "<group>"; };
+		BDC049C423357EE900E76E4A /* PlayerDetailsView+Gestures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PlayerDetailsView+Gestures.swift"; sourceTree = "<group>"; };
+		BDC049C523357EE900E76E4A /* PlayerDetailsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerDetailsView.swift; sourceTree = "<group>"; };
+		BDC049C623357EE900E76E4A /* PlayerDetailsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerDetailsView.xib; sourceTree = "<group>"; };
 		BE8DE4D0DC539F5171EB998C /* Pods-EOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EOS.debug.xcconfig"; path = "Target Support Files/Pods-EOS/Pods-EOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -160,6 +170,11 @@
 				BD56795E23341B25000D0C02 /* BlogDetailView.swift */,
 				BD56792E2328B19B000D0C02 /* MeditationCell.xib */,
 				BD5679302328B34A000D0C02 /* MeditationCell.swift */,
+				BDC049C223357EE800E76E4A /* EpisodeTableViewCell.xib */,
+				BDC049C323357EE800E76E4A /* EpisodeTableViewCell.swift */,
+				BDC049C523357EE900E76E4A /* PlayerDetailsView.swift */,
+				BDC049C623357EE900E76E4A /* PlayerDetailsView.xib */,
+				BDC049C423357EE900E76E4A /* PlayerDetailsView+Gestures.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -261,9 +276,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD0F8DC1232098B600ACCAC0 /* LaunchScreen.storyboard in Resources */,
+				BDC049C723357EE900E76E4A /* EpisodeTableViewCell.xib in Resources */,
 				BD56792F2328B19B000D0C02 /* MeditationCell.xib in Resources */,
 				BD0F8DBE232098B600ACCAC0 /* Assets.xcassets in Resources */,
 				BD5679282323377C000D0C02 /* BlogCell.xib in Resources */,
+				BDC049CB23357EE900E76E4A /* PlayerDetailsView.xib in Resources */,
 				BD56795D2333D80C000D0C02 /* BlogDetailView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -329,6 +346,7 @@
 				BD567952233320BC000D0C02 /* CMTime.swift in Sources */,
 				BD56791C2320BDF5000D0C02 /* GoalSetterViewController.swift in Sources */,
 				BD567953233320BC000D0C02 /* UIView+Nib.swift in Sources */,
+				BDC049C823357EE900E76E4A /* EpisodeTableViewCell.swift in Sources */,
 				BD567920232175BB000D0C02 /* Colors.swift in Sources */,
 				BD5679312328B34A000D0C02 /* MeditationCell.swift in Sources */,
 				BD56793923297FD3000D0C02 /* MeditationPlayerViewController.swift in Sources */,
@@ -340,11 +358,13 @@
 				BD0F8DB7232098B500ACCAC0 /* AppDelegate.swift in Sources */,
 				BD56791A2320BB6E000D0C02 /* MeditationViewController.swift in Sources */,
 				BD0F8DC923209AB200ACCAC0 /* MainTabBarController.swift in Sources */,
+				BDC049CA23357EE900E76E4A /* PlayerDetailsView.swift in Sources */,
 				BD567956233320BC000D0C02 /* ReuseIdentifier.swift in Sources */,
 				BD56795B233321B6000D0C02 /* Podcast.swift in Sources */,
 				BD56795923332191000D0C02 /* Episode.swift in Sources */,
 				BD567957233320BC000D0C02 /* UIApplication.swift in Sources */,
 				BD567954233320BC000D0C02 /* UserDefaults.swift in Sources */,
+				BDC049C923357EE900E76E4A /* PlayerDetailsView+Gestures.swift in Sources */,
 				BD567925232328B0000D0C02 /* Blog.swift in Sources */,
 				BD567955233320BC000D0C02 /* Constants.swift in Sources */,
 				BD5679332328B3A5000D0C02 /* Meditation.swift in Sources */,

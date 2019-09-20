@@ -6,8 +6,8 @@
 //  Copyright © 2019 Patrick Holmes. All rights reserved.
 //
 
-//import Foundation
-//
-//enum EndPoints {
-//  static let iTunesSearchURL = "https://itunes.apple.com/search"
-//}
+import Foundation
+
+enum EndPoints {
+  static let iTunesSearchURL = "https://itunes.apple.com/search"
+}

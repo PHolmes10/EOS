@@ -6,8 +6,8 @@ target 'EOS' do
   use_frameworks!
 
   # Pods for EOS
-pod 'Alamofire', '~> 5.0.0-rc.2'
-pod 'FeedKit', '~> 8.0'
+pod 'Alamofire', '~> 4.5'
+pod 'FeedKit', '~> 6.0'
 pod 'Kingfisher', '~> 5.0'
 
 end
