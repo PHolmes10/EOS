@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		57F7699AB70B3604A1200A78 /* Pods_EOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BABAC5695991F0A1A371C94 /* Pods_EOS.framework */; };
 		BD0F8DB7232098B500ACCAC0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0F8DB6232098B500ACCAC0 /* AppDelegate.swift */; };
 		BD0F8DB9232098B500ACCAC0 /* BlogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0F8DB8232098B500ACCAC0 /* BlogViewController.swift */; };
 		BD0F8DBE232098B600ACCAC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD0F8DBD232098B600ACCAC0 /* Assets.xcassets */; };
@@ -23,7 +24,6 @@
 		BD56792F2328B19B000D0C02 /* MeditationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD56792E2328B19B000D0C02 /* MeditationCell.xib */; };
 		BD5679312328B34A000D0C02 /* MeditationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5679302328B34A000D0C02 /* MeditationCell.swift */; };
 		BD5679332328B3A5000D0C02 /* Meditation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5679322328B3A5000D0C02 /* Meditation.swift */; };
-		BD56793723297B96000D0C02 /* BlogDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD56793623297B96000D0C02 /* BlogDetailViewController.swift */; };
 		BD56793923297FD3000D0C02 /* MeditationPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD56793823297FD3000D0C02 /* MeditationPlayerViewController.swift */; };
 		BD56794823332054000D0C02 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD56794723332054000D0C02 /* API.swift */; };
 		BD567951233320BC000D0C02 /* RSSFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD56794A233320BB000D0C02 /* RSSFeed.swift */; };
@@ -40,6 +40,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4BABAC5695991F0A1A371C94 /* Pods_EOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		74EB246808680DDC1C2999BF /* Pods-EOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EOS.release.xcconfig"; path = "Target Support Files/Pods-EOS/Pods-EOS.release.xcconfig"; sourceTree = "<group>"; };
 		BD0F8DB3232098B500ACCAC0 /* EOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD0F8DB6232098B500ACCAC0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD0F8DB8232098B500ACCAC0 /* BlogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogViewController.swift; sourceTree = "<group>"; };
@@ -58,7 +60,6 @@
 		BD56792E2328B19B000D0C02 /* MeditationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MeditationCell.xib; sourceTree = "<group>"; };
 		BD5679302328B34A000D0C02 /* MeditationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationCell.swift; sourceTree = "<group>"; };
 		BD5679322328B3A5000D0C02 /* Meditation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meditation.swift; sourceTree = "<group>"; };
-		BD56793623297B96000D0C02 /* BlogDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogDetailViewController.swift; sourceTree = "<group>"; };
 		BD56793823297FD3000D0C02 /* MeditationPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationPlayerViewController.swift; sourceTree = "<group>"; };
 		BD56794723332054000D0C02 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		BD56794A233320BB000D0C02 /* RSSFeed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSSFeed.swift; sourceTree = "<group>"; };
@@ -72,6 +73,7 @@
 		BD56795A233321B6000D0C02 /* Podcast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Podcast.swift; sourceTree = "<group>"; };
 		BD56795C2333D80C000D0C02 /* BlogDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = BlogDetailView.xib; path = EOS/Views/BlogDetailView.xib; sourceTree = SOURCE_ROOT; };
 		BD56795E23341B25000D0C02 /* BlogDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogDetailView.swift; sourceTree = "<group>"; };
+		BE8DE4D0DC539F5171EB998C /* Pods-EOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EOS.debug.xcconfig"; path = "Target Support Files/Pods-EOS/Pods-EOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,17 +81,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57F7699AB70B3604A1200A78 /* Pods_EOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		018720575D4C45F621FC4423 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4BABAC5695991F0A1A371C94 /* Pods_EOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4D29FA4C49563815E3572CA5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BE8DE4D0DC539F5171EB998C /* Pods-EOS.debug.xcconfig */,
+				74EB246808680DDC1C2999BF /* Pods-EOS.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		BD0F8DAA232098B500ACCAC0 = {
 			isa = PBXGroup;
 			children = (
 				BD0F8DB5232098B500ACCAC0 /* EOS */,
 				BD0F8DB4232098B500ACCAC0 /* Products */,
+				4D29FA4C49563815E3572CA5 /* Pods */,
+				018720575D4C45F621FC4423 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -145,7 +167,6 @@
 		BD56792D232861E2000D0C02 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				BD56793623297B96000D0C02 /* BlogDetailViewController.swift */,
 				BD0F8DC823209AB200ACCAC0 /* MainTabBarController.swift */,
 				BD0F8DB8232098B500ACCAC0 /* BlogViewController.swift */,
 				BD5679172320B9F1000D0C02 /* PodcastViewController.swift */,
@@ -186,9 +207,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BD0F8DC5232098B600ACCAC0 /* Build configuration list for PBXNativeTarget "EOS" */;
 			buildPhases = (
+				679BBBA89FC6767714E9F1CB /* [CP] Check Pods Manifest.lock */,
 				BD0F8DAF232098B500ACCAC0 /* Sources */,
 				BD0F8DB0232098B500ACCAC0 /* Frameworks */,
 				BD0F8DB1232098B500ACCAC0 /* Resources */,
+				FC3FF40F9120398199E781E3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -247,6 +270,57 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		679BBBA89FC6767714E9F1CB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FC3FF40F9120398199E781E3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EOS/Pods-EOS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/FeedKit/FeedKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FeedKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EOS/Pods-EOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BD0F8DAF232098B500ACCAC0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -276,7 +350,6 @@
 				BD5679332328B3A5000D0C02 /* Meditation.swift in Sources */,
 				BD56791E23217463000D0C02 /* ShopViewController.swift in Sources */,
 				BD5679182320B9F1000D0C02 /* PodcastViewController.swift in Sources */,
-				BD56793723297B96000D0C02 /* BlogDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +485,7 @@
 		};
 		BD0F8DC6232098B600ACCAC0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE8DE4D0DC539F5171EB998C /* Pods-EOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -430,6 +504,7 @@
 		};
 		BD0F8DC7232098B600ACCAC0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 74EB246808680DDC1C2999BF /* Pods-EOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
