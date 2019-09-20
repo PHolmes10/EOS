@@ -74,10 +74,25 @@ class BlogViewController: UITableViewController {
     // MARK:- UITableViewDelegate
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(indexPath.row)
+        let blog = blogs[indexPath.row]
+        print(blog.title)
         tableView.deselectRow(at: indexPath, animated: true)
-        let blogDetailViewController = BlogDetailViewController()
-        self.navigationController?.pushViewController(blogDetailViewController, animated: true)
+//        let blogDetailViewController = BlogDetailViewController()
+//        self.navigationController?.pushViewController(blogDetailViewController, animated: true)
+        
+        let window = UIApplication.shared.keyWindow
+        let blogDetailView = Bundle.main.loadNibNamed("BlogDetailView", owner: self, options: nil)?.first as! BlogDetailView
+        
+        blogDetailView.blog = blog
+        
+        blogDetailView.frame = self.view.frame
+//        blogDetailView.backgroundColor = .red
+                let colors = BlogColors()
+                let backgroundLayer = colors.gl
+                backgroundLayer?.frame = self.view.frame
+                blogDetailView.layer.insertSublayer(backgroundLayer!, at: 0)
+        window?.addSubview(blogDetailView)
+
     }
     
 }

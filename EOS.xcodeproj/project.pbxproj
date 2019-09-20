@@ -25,7 +25,18 @@
 		BD5679332328B3A5000D0C02 /* Meditation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5679322328B3A5000D0C02 /* Meditation.swift */; };
 		BD56793723297B96000D0C02 /* BlogDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD56793623297B96000D0C02 /* BlogDetailViewController.swift */; };
 		BD56793923297FD3000D0C02 /* MeditationPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD56793823297FD3000D0C02 /* MeditationPlayerViewController.swift */; };
-		BD56794123299293000D0C02 /* BlogDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD56794023299292000D0C02 /* BlogDetail.xib */; };
+		BD56794823332054000D0C02 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD56794723332054000D0C02 /* API.swift */; };
+		BD567951233320BC000D0C02 /* RSSFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD56794A233320BB000D0C02 /* RSSFeed.swift */; };
+		BD567952233320BC000D0C02 /* CMTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD56794B233320BC000D0C02 /* CMTime.swift */; };
+		BD567953233320BC000D0C02 /* UIView+Nib.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD56794C233320BC000D0C02 /* UIView+Nib.swift */; };
+		BD567954233320BC000D0C02 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD56794D233320BC000D0C02 /* UserDefaults.swift */; };
+		BD567955233320BC000D0C02 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD56794E233320BC000D0C02 /* Constants.swift */; };
+		BD567956233320BC000D0C02 /* ReuseIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD56794F233320BC000D0C02 /* ReuseIdentifier.swift */; };
+		BD567957233320BC000D0C02 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD567950233320BC000D0C02 /* UIApplication.swift */; };
+		BD56795923332191000D0C02 /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD56795823332191000D0C02 /* Episode.swift */; };
+		BD56795B233321B6000D0C02 /* Podcast.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD56795A233321B6000D0C02 /* Podcast.swift */; };
+		BD56795D2333D80C000D0C02 /* BlogDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD56795C2333D80C000D0C02 /* BlogDetailView.xib */; };
+		BD56795F23341B25000D0C02 /* BlogDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD56795E23341B25000D0C02 /* BlogDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,7 +60,18 @@
 		BD5679322328B3A5000D0C02 /* Meditation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meditation.swift; sourceTree = "<group>"; };
 		BD56793623297B96000D0C02 /* BlogDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogDetailViewController.swift; sourceTree = "<group>"; };
 		BD56793823297FD3000D0C02 /* MeditationPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationPlayerViewController.swift; sourceTree = "<group>"; };
-		BD56794023299292000D0C02 /* BlogDetail.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BlogDetail.xib; sourceTree = "<group>"; };
+		BD56794723332054000D0C02 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		BD56794A233320BB000D0C02 /* RSSFeed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSSFeed.swift; sourceTree = "<group>"; };
+		BD56794B233320BC000D0C02 /* CMTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CMTime.swift; sourceTree = "<group>"; };
+		BD56794C233320BC000D0C02 /* UIView+Nib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Nib.swift"; sourceTree = "<group>"; };
+		BD56794D233320BC000D0C02 /* UserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
+		BD56794E233320BC000D0C02 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		BD56794F233320BC000D0C02 /* ReuseIdentifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReuseIdentifier.swift; sourceTree = "<group>"; };
+		BD567950233320BC000D0C02 /* UIApplication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
+		BD56795823332191000D0C02 /* Episode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
+		BD56795A233321B6000D0C02 /* Podcast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Podcast.swift; sourceTree = "<group>"; };
+		BD56795C2333D80C000D0C02 /* BlogDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = BlogDetailView.xib; path = ../../BlogDetailView.xib; sourceTree = "<group>"; };
+		BD56795E23341B25000D0C02 /* BlogDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +105,8 @@
 			isa = PBXGroup;
 			children = (
 				BD0F8DB6232098B500ACCAC0 /* AppDelegate.swift */,
+				BD5679462333203E000D0C02 /* Networking */,
+				BD567949233320A1000D0C02 /* Helpers */,
 				BD5679232323289A000D0C02 /* Models */,
 				BD5679262323373A000D0C02 /* Views */,
 				BD56792D232861E2000D0C02 /* Controllers */,
@@ -99,6 +123,8 @@
 			children = (
 				BD567924232328B0000D0C02 /* Blog.swift */,
 				BD5679322328B3A5000D0C02 /* Meditation.swift */,
+				BD56795823332191000D0C02 /* Episode.swift */,
+				BD56795A233321B6000D0C02 /* Podcast.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -108,7 +134,8 @@
 			children = (
 				BD5679272323377B000D0C02 /* BlogCell.xib */,
 				BD56792923280AF0000D0C02 /* BlogCell.swift */,
-				BD56794023299292000D0C02 /* BlogDetail.xib */,
+				BD56795C2333D80C000D0C02 /* BlogDetailView.xib */,
+				BD56795E23341B25000D0C02 /* BlogDetailView.swift */,
 				BD56792E2328B19B000D0C02 /* MeditationCell.xib */,
 				BD5679302328B34A000D0C02 /* MeditationCell.swift */,
 			);
@@ -118,8 +145,8 @@
 		BD56792D232861E2000D0C02 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				BD0F8DC823209AB200ACCAC0 /* MainTabBarController.swift */,
 				BD56793623297B96000D0C02 /* BlogDetailViewController.swift */,
+				BD0F8DC823209AB200ACCAC0 /* MainTabBarController.swift */,
 				BD0F8DB8232098B500ACCAC0 /* BlogViewController.swift */,
 				BD5679172320B9F1000D0C02 /* PodcastViewController.swift */,
 				BD56791B2320BDF5000D0C02 /* GoalSetterViewController.swift */,
@@ -128,6 +155,28 @@
 				BD56791D23217463000D0C02 /* ShopViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		BD5679462333203E000D0C02 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				BD56794723332054000D0C02 /* API.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		BD567949233320A1000D0C02 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				BD56794B233320BC000D0C02 /* CMTime.swift */,
+				BD56794E233320BC000D0C02 /* Constants.swift */,
+				BD56794F233320BC000D0C02 /* ReuseIdentifier.swift */,
+				BD56794A233320BB000D0C02 /* RSSFeed.swift */,
+				BD567950233320BC000D0C02 /* UIApplication.swift */,
+				BD56794C233320BC000D0C02 /* UIView+Nib.swift */,
+				BD56794D233320BC000D0C02 /* UserDefaults.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,9 +239,9 @@
 			files = (
 				BD0F8DC1232098B600ACCAC0 /* LaunchScreen.storyboard in Resources */,
 				BD56792F2328B19B000D0C02 /* MeditationCell.xib in Resources */,
-				BD56794123299293000D0C02 /* BlogDetail.xib in Resources */,
 				BD0F8DBE232098B600ACCAC0 /* Assets.xcassets in Resources */,
 				BD5679282323377C000D0C02 /* BlogCell.xib in Resources */,
+				BD56795D2333D80C000D0C02 /* BlogDetailView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,16 +252,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD567952233320BC000D0C02 /* CMTime.swift in Sources */,
 				BD56791C2320BDF5000D0C02 /* GoalSetterViewController.swift in Sources */,
+				BD567953233320BC000D0C02 /* UIView+Nib.swift in Sources */,
 				BD567920232175BB000D0C02 /* Colors.swift in Sources */,
 				BD5679312328B34A000D0C02 /* MeditationCell.swift in Sources */,
 				BD56793923297FD3000D0C02 /* MeditationPlayerViewController.swift in Sources */,
+				BD567951233320BC000D0C02 /* RSSFeed.swift in Sources */,
+				BD56794823332054000D0C02 /* API.swift in Sources */,
 				BD0F8DB9232098B500ACCAC0 /* BlogViewController.swift in Sources */,
 				BD56792A23280AF0000D0C02 /* BlogCell.swift in Sources */,
+				BD56795F23341B25000D0C02 /* BlogDetailView.swift in Sources */,
 				BD0F8DB7232098B500ACCAC0 /* AppDelegate.swift in Sources */,
 				BD56791A2320BB6E000D0C02 /* MeditationViewController.swift in Sources */,
 				BD0F8DC923209AB200ACCAC0 /* MainTabBarController.swift in Sources */,
+				BD567956233320BC000D0C02 /* ReuseIdentifier.swift in Sources */,
+				BD56795B233321B6000D0C02 /* Podcast.swift in Sources */,
+				BD56795923332191000D0C02 /* Episode.swift in Sources */,
+				BD567957233320BC000D0C02 /* UIApplication.swift in Sources */,
+				BD567954233320BC000D0C02 /* UserDefaults.swift in Sources */,
 				BD567925232328B0000D0C02 /* Blog.swift in Sources */,
+				BD567955233320BC000D0C02 /* Constants.swift in Sources */,
 				BD5679332328B3A5000D0C02 /* Meditation.swift in Sources */,
 				BD56791E23217463000D0C02 /* ShopViewController.swift in Sources */,
 				BD5679182320B9F1000D0C02 /* PodcastViewController.swift in Sources */,
