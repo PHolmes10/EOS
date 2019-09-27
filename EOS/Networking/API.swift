@@ -56,7 +56,6 @@ class APIService {
                 }
 
                 guard let feed = result.rssFeed else { return }
-                print("fetchEpisodes in API.swift")
 
                 let episodes = feed.toEpisodes()
                 completionHandler(episodes)
@@ -65,7 +64,7 @@ class APIService {
     }
 
     func fetchPodcasts(term: String, completionHandler: @escaping ([Podcast]) -> ()) {
-        let parameters = ["term": "this past weekend", "media": "podcast"]
+        let parameters = ["term": "Brian Voong", "media": "podcast"]
         Alamofire
             .request(EndPoints.iTunesSearchURL , method: .get, parameters: parameters, encoding: URLEncoding.default, headers: nil)
             .responseData { (dataResponse) in
@@ -79,7 +78,6 @@ class APIService {
                 do {
                     let searchResult = try JSONDecoder().decode(SearchResults.self, from: data)
                     completionHandler(searchResult.results)
-                    print("search results in API.swift")
                 } catch let decodeErr {
                     print("Failed to decode:", decodeErr)
                 }

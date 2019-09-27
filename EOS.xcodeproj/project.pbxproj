@@ -42,6 +42,7 @@
 		BDC049C923357EE900E76E4A /* PlayerDetailsView+Gestures.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC049C423357EE900E76E4A /* PlayerDetailsView+Gestures.swift */; };
 		BDC049CA23357EE900E76E4A /* PlayerDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC049C523357EE900E76E4A /* PlayerDetailsView.swift */; };
 		BDC049CB23357EE900E76E4A /* PlayerDetailsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDC049C623357EE900E76E4A /* PlayerDetailsView.xib */; };
+		BDC049CD233999B900E76E4A /* GoalMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDC049CC233999B900E76E4A /* GoalMenuView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -83,6 +84,7 @@
 		BDC049C423357EE900E76E4A /* PlayerDetailsView+Gestures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PlayerDetailsView+Gestures.swift"; sourceTree = "<group>"; };
 		BDC049C523357EE900E76E4A /* PlayerDetailsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerDetailsView.swift; sourceTree = "<group>"; };
 		BDC049C623357EE900E76E4A /* PlayerDetailsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerDetailsView.xib; sourceTree = "<group>"; };
+		BDC049CC233999B900E76E4A /* GoalMenuView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GoalMenuView.xib; sourceTree = "<group>"; };
 		BE8DE4D0DC539F5171EB998C /* Pods-EOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EOS.debug.xcconfig"; path = "Target Support Files/Pods-EOS/Pods-EOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -168,6 +170,7 @@
 				BD56792923280AF0000D0C02 /* BlogCell.swift */,
 				BD56795C2333D80C000D0C02 /* BlogDetailView.xib */,
 				BD56795E23341B25000D0C02 /* BlogDetailView.swift */,
+				BDC049CC233999B900E76E4A /* GoalMenuView.xib */,
 				BD56792E2328B19B000D0C02 /* MeditationCell.xib */,
 				BD5679302328B34A000D0C02 /* MeditationCell.swift */,
 				BDC049C223357EE800E76E4A /* EpisodeTableViewCell.xib */,
@@ -279,6 +282,7 @@
 				BDC049C723357EE900E76E4A /* EpisodeTableViewCell.xib in Resources */,
 				BD56792F2328B19B000D0C02 /* MeditationCell.xib in Resources */,
 				BD0F8DBE232098B600ACCAC0 /* Assets.xcassets in Resources */,
+				BDC049CD233999B900E76E4A /* GoalMenuView.xib in Resources */,
 				BD5679282323377C000D0C02 /* BlogCell.xib in Resources */,
 				BDC049CB23357EE900E76E4A /* PlayerDetailsView.xib in Resources */,
 				BD56795D2333D80C000D0C02 /* BlogDetailView.xib in Resources */,

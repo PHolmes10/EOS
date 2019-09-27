@@ -26,7 +26,9 @@ class PodcastViewController: UITableViewController {
         super.viewDidLoad()
         
         
-        
+        let tempImageView = UIImageView(image: UIImage(named: "gradientImage"))
+        tempImageView.frame = self.tableView.frame
+        self.tableView.backgroundView = tempImageView
 //        let colors = PodcastColors()
 //
 //        view.backgroundColor = UIColor.clear
@@ -79,6 +81,7 @@ class PodcastViewController: UITableViewController {
     fileprivate func setupTableView() {
         tableView.register(EpisodeTableViewCell.nib, forCellReuseIdentifier: EpisodeTableViewCell.reuseIdentifier)
         tableView.tableFooterView = UIView()
+        self.tableView.separatorStyle = .none
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -88,14 +91,16 @@ class PodcastViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: EpisodeTableViewCell.reuseIdentifier, for: indexPath) as! EpisodeTableViewCell
         cell.episode = episodes[indexPath.row]
+        cell.backgroundColor = UIColor.clear
         return cell
     }
 
-//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let episode = self.episodes[indexPath.row]
-//        let mainTabBarController = UIApplication.shared.keyWindow?.rootViewController as? MainTabBarController
-//        mainTabBarController?.maximizePlayerDetails(episode: episode, playlistEpisodes: self.episodes)
-//    }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let episode = self.episodes[indexPath.row]
+        let mainTabBarController = UIApplication.shared.keyWindow?.rootViewController as? MainTabBarController
+        mainTabBarController?.maximizePlayerDetails(episode: episode, playlistEpisodes: self.episodes)
+        print("this is episode", episode.title)
+    }
 
 
     fileprivate func showBadgeHighlight() {
@@ -106,7 +111,8 @@ class PodcastViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         let activityIndicatorView = UIActivityIndicatorView(style: .whiteLarge)
-        activityIndicatorView.color = .darkGray
+        activityIndicatorView.color = .black
+        activityIndicatorView.center = self.view.center
         activityIndicatorView.startAnimating()
         return activityIndicatorView
     }
@@ -123,7 +129,7 @@ class PodcastViewController: UITableViewController {
     //MARK:- Variable height support
 
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 200
+        return 250
     }
 
     override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {

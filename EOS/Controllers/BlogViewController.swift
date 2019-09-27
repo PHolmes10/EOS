@@ -18,6 +18,7 @@ class BlogViewController: UITableViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        self.title = "Blog"
 // Background layout and colors
         
 //        let colors = BlogColors()
@@ -28,7 +29,7 @@ class BlogViewController: UITableViewController {
         
 // Background image tableView (possibly less buggy than gradient)
         
-        let tempImageView = UIImageView(image: UIImage(named: "gradientImage"))
+        let tempImageView = UIImageView(image: UIImage(named: "blueGradient"))
         tempImageView.frame = self.tableView.frame
         self.tableView.backgroundView = tempImageView
         
@@ -68,7 +69,7 @@ class BlogViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 200
+        return 250
     }
     
     // MARK:- UITableViewDelegate
