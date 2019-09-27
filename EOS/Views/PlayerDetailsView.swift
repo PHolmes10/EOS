@@ -294,7 +294,7 @@ class PlayerDetailsView: UIView {
 
   @IBOutlet weak var episodeImageView: UIImageView! {
     didSet {
-      episodeImageView.layer.cornerRadius = 5
+      episodeImageView.layer.cornerRadius = 40
       episodeImageView.clipsToBounds = true
       episodeImageView.transform = shrunkenTransform
     }

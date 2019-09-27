@@ -26,7 +26,7 @@ class PodcastViewController: UITableViewController {
         super.viewDidLoad()
         
         
-        let tempImageView = UIImageView(image: UIImage(named: "gradientImage"))
+        let tempImageView = UIImageView(image: UIImage(named: "blueGradient"))
         tempImageView.frame = self.tableView.frame
         self.tableView.backgroundView = tempImageView
 //        let colors = PodcastColors()
