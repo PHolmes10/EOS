@@ -17,6 +17,8 @@ extension Notification.Name {
     static let downloadComplete = NSNotification.Name("downloadComplete")
 }
 
+var podcastTerm:String = "this past weekend"
+
 class APIService {
 
     typealias EpisodeDownloadCompleteTuple = (fileUrl: String, episodeTitle: String)
@@ -64,7 +66,7 @@ class APIService {
     }
 
     func fetchPodcasts(term: String, completionHandler: @escaping ([Podcast]) -> ()) {
-        let parameters = ["term": "this past weekend", "media": "podcast"]
+        let parameters = ["term": term, "media": "podcast"]
         Alamofire
             .request(EndPoints.iTunesSearchURL , method: .get, parameters: parameters, encoding: URLEncoding.default, headers: nil)
             .responseData { (dataResponse) in

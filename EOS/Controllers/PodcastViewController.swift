@@ -22,6 +22,8 @@ class PodcastViewController: UITableViewController {
         }
     }
     
+    var term = "brian voong"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -46,7 +48,7 @@ class PodcastViewController: UITableViewController {
     func findPodcast() {
         podcasts = []
         tableView.reloadData()
-        APIService.shared.fetchPodcasts(term: "this past weekend") { podcasts in
+        APIService.shared.fetchPodcasts(term: term) { podcasts in
             self.podcasts = podcasts
             print(podcasts)
             self.findEpisodes()
@@ -97,6 +99,7 @@ class PodcastViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let episode = self.episodes[indexPath.row]
+        tableView.deselectRow(at: indexPath, animated: true)
         let mainTabBarController = UIApplication.shared.keyWindow?.rootViewController as? MainTabBarController
         mainTabBarController?.maximizePlayerDetails(episode: episode, playlistEpisodes: self.episodes)
         print("this is episode", episode.title)
