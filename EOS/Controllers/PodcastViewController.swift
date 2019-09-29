@@ -111,7 +111,7 @@ class PodcastViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         let activityIndicatorView = UIActivityIndicatorView(style: .whiteLarge)
-        activityIndicatorView.color = .black
+        activityIndicatorView.color = .white
         activityIndicatorView.center = self.view.center
         activityIndicatorView.startAnimating()
         return activityIndicatorView
