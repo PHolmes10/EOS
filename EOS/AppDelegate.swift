@@ -29,11 +29,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UITabBar.appearance().tintColor = UIColor(red: 37.0 / 255.0, green: 163.0 / 255.0, blue: 181.0 / 255.0, alpha: 1.0)
         
         let navBar = UINavigationBar.appearance()
-        navBar.barTintColor = UIColor.clear
-//        navBar.backgroundImage = UIImage()
-//        navBar.shadowImage = UIImage()
+//        navBar.barTintColor = .blue
         
-        UINavigationBar.appearance().tintColor = UIColor(red: 37.0 / 255.0, green: 163.0 / 255.0, blue: 181.0 / 255.0, alpha: 1.0)
+        navBar.setBackgroundImage(UIImage(), for: .default)
+        // Sets shadow (line below the bar) to a blank image
+        navBar.shadowImage = UIImage()
+        // Sets the translucent background color
+        navBar.backgroundColor = .clear
+        // Set translucent. (Default value is already true, so this can be removed if desired.)
+        navBar.isTranslucent = true
         
         return true
     }

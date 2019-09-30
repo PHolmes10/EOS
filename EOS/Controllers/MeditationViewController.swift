@@ -31,22 +31,21 @@ class MeditationViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+          // Possible navBar options if they want to show title on top of page
+//        self.navigationItem.title = "Meditations"
+//        navigationController?.hidesBarsOnSwipe = true
+
+        
+          // Background color for page (buggy)
 //        let colors = MeditationColors()
-//        
 //        view.backgroundColor = UIColor.clear
 //        let backgroundLayer = colors.gl
 //        backgroundLayer?.frame = view.frame
 //        view.layer.insertSublayer(backgroundLayer!, at: 0)
         
-        let tempImageView = UIImageView(image: UIImage(named: "gradientImage"))
+        let tempImageView = UIImageView(image: UIImage(named: "blueGradient"))
         tempImageView.frame = self.tableView.frame
         self.tableView.backgroundView = tempImageView
-        
-        // Registering Cell for tableview
-        
-        
-//        setUpTableView()
-        
         
         // Podcast replica functions
         findPodcast()
@@ -130,6 +129,8 @@ class MeditationViewController: UITableViewController {
         tableView.register(EpisodeTableViewCell.nib, forCellReuseIdentifier: EpisodeTableViewCell.reuseIdentifier)
         tableView.tableFooterView = UIView()
         self.tableView.separatorStyle = .none
+        let insets = UIEdgeInsets(top: 0, left: 0, bottom: 70, right: 0)
+        self.tableView.contentInset = insets
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -28,8 +28,6 @@ class GoalSetterViewController: UIViewController {
         self.view.addSubview(button)
     }
     
-
-    
     @objc func buttonClicked() {
         print("Button Clicked")
     }

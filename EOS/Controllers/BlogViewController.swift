@@ -46,6 +46,8 @@ class BlogViewController: UITableViewController {
         let nib = UINib(nibName: "BlogCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: cellId)
         self.tableView.separatorStyle = .none
+        let insets = UIEdgeInsets(top: 0, left: 0, bottom: 70, right: 0)
+        self.tableView.contentInset = insets
 
     }
     
@@ -59,11 +61,6 @@ class BlogViewController: UITableViewController {
         cell.backgroundColor = UIColor.clear
         let blog = blogs[indexPath.row]
         cell.blog = blog
-//        let blog = self.blogs[indexPath.row]
-//        cell.textLabel?.text = "\(blog.title)\n\(blog.author)"
-//        cell.textLabel?.numberOfLines = -1
-//        cell.textLabel?.textColor = .red
-//        cell.imageView?.image = #imageLiteral(resourceName: "testCellImage")
         
         return cell
     }
@@ -78,8 +75,6 @@ class BlogViewController: UITableViewController {
         let blog = blogs[indexPath.row]
         print(blog.title)
         tableView.deselectRow(at: indexPath, animated: true)
-//        let blogDetailViewController = BlogDetailViewController()
-//        self.navigationController?.pushViewController(blogDetailViewController, animated: true)
         
         let window = UIApplication.shared.keyWindow
         let blogDetailView = Bundle.main.loadNibNamed("BlogDetailView", owner: self, options: nil)?.first as! BlogDetailView
@@ -87,7 +82,6 @@ class BlogViewController: UITableViewController {
         blogDetailView.blog = blog
         
         blogDetailView.frame = self.view.frame
-//        blogDetailView.backgroundColor = .red
                 let colors = BlogColors()
                 let backgroundLayer = colors.gl
                 backgroundLayer?.frame = self.view.frame

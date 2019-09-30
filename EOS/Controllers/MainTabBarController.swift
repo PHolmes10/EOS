@@ -39,7 +39,9 @@ class MainTabBarController: UITabBarController {
         podcastController.tabBarItem.image = #imageLiteral(resourceName: "podcast")
         podcastController.tabBarItem.imageInsets = UIEdgeInsets(top: 8, left: 0, bottom: -8, right: 0)
         
-        let meditationController = UINavigationController(rootViewController: MeditationViewController())
+        // Use the following code to wrap in navigation controller for navbar title etc.
+//        let meditationController = UINavigationController(rootViewController: MeditationViewController())
+        let meditationController =  MeditationViewController()
         meditationController.tabBarItem.title = "Meditation"
         meditationController.tabBarItem.image = #imageLiteral(resourceName: "meditation")
         meditationController.tabBarItem.imageInsets = UIEdgeInsets(top: 8, left: 0, bottom: -8, right: 0)
@@ -114,6 +116,7 @@ class MainTabBarController: UITabBarController {
             self.playerDetailsView.maximizedStackView.alpha = 0
             self.playerDetailsView.miniPlayerView.alpha = 1
         })
+        
     }
     
     func maximizePlayerDetails(episode: Episode?, playlistEpisodes: [Episode] = []) {

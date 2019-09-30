@@ -84,6 +84,8 @@ class PodcastViewController: UITableViewController {
         tableView.register(EpisodeTableViewCell.nib, forCellReuseIdentifier: EpisodeTableViewCell.reuseIdentifier)
         tableView.tableFooterView = UIView()
         self.tableView.separatorStyle = .none
+        let insets = UIEdgeInsets(top: 0, left: 0, bottom: 70, right: 0)
+        self.tableView.contentInset = insets
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
