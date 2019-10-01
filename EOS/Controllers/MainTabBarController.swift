@@ -46,7 +46,7 @@ class MainTabBarController: UITabBarController {
         meditationController.tabBarItem.image = #imageLiteral(resourceName: "meditation")
         meditationController.tabBarItem.imageInsets = UIEdgeInsets(top: 8, left: 0, bottom: -8, right: 0)
         
-        let goalSetterController = GoalSetterViewController()
+        let goalSetterController = UINavigationController(rootViewController: GoalSetterViewController())
         goalSetterController.tabBarItem.title = "Goal Setter"
         goalSetterController.tabBarItem.image = #imageLiteral(resourceName: "goalSetter")
         goalSetterController.tabBarItem.imageInsets = UIEdgeInsets(top: 8, left: 0, bottom: -8, right: 0)

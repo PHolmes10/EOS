@@ -24,7 +24,6 @@
 		BD56792F2328B19B000D0C02 /* MeditationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD56792E2328B19B000D0C02 /* MeditationCell.xib */; };
 		BD5679312328B34A000D0C02 /* MeditationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5679302328B34A000D0C02 /* MeditationCell.swift */; };
 		BD5679332328B3A5000D0C02 /* Meditation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5679322328B3A5000D0C02 /* Meditation.swift */; };
-		BD56793923297FD3000D0C02 /* MeditationPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD56793823297FD3000D0C02 /* MeditationPlayerViewController.swift */; };
 		BD56794823332054000D0C02 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD56794723332054000D0C02 /* API.swift */; };
 		BD567951233320BC000D0C02 /* RSSFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD56794A233320BB000D0C02 /* RSSFeed.swift */; };
 		BD567952233320BC000D0C02 /* CMTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD56794B233320BC000D0C02 /* CMTime.swift */; };
@@ -37,12 +36,15 @@
 		BD56795B233321B6000D0C02 /* Podcast.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD56795A233321B6000D0C02 /* Podcast.swift */; };
 		BD56795D2333D80C000D0C02 /* BlogDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD56795C2333D80C000D0C02 /* BlogDetailView.xib */; };
 		BD56795F23341B25000D0C02 /* BlogDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD56795E23341B25000D0C02 /* BlogDetailView.swift */; };
+		BDBEC0A42342889F00FB1DAF /* EOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BDBEC0A22342889F00FB1DAF /* EOS.xcdatamodeld */; };
+		BDBEC0A62342907900FB1DAF /* GoalSetterMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDBEC0A52342907900FB1DAF /* GoalSetterMainView.xib */; };
+		BDBEC0A82342914D00FB1DAF /* GoalSetterMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBEC0A72342914D00FB1DAF /* GoalSetterMainView.swift */; };
+		BDBEC0AA23429E1200FB1DAF /* GoalSetterGoalsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBEC0A923429E1200FB1DAF /* GoalSetterGoalsListViewController.swift */; };
 		BDC049C723357EE900E76E4A /* EpisodeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDC049C223357EE800E76E4A /* EpisodeTableViewCell.xib */; };
 		BDC049C823357EE900E76E4A /* EpisodeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC049C323357EE800E76E4A /* EpisodeTableViewCell.swift */; };
 		BDC049C923357EE900E76E4A /* PlayerDetailsView+Gestures.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC049C423357EE900E76E4A /* PlayerDetailsView+Gestures.swift */; };
 		BDC049CA23357EE900E76E4A /* PlayerDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC049C523357EE900E76E4A /* PlayerDetailsView.swift */; };
 		BDC049CB23357EE900E76E4A /* PlayerDetailsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDC049C623357EE900E76E4A /* PlayerDetailsView.xib */; };
-		BDC049CD233999B900E76E4A /* GoalMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDC049CC233999B900E76E4A /* GoalMenuView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,7 +68,6 @@
 		BD56792E2328B19B000D0C02 /* MeditationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MeditationCell.xib; sourceTree = "<group>"; };
 		BD5679302328B34A000D0C02 /* MeditationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationCell.swift; sourceTree = "<group>"; };
 		BD5679322328B3A5000D0C02 /* Meditation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meditation.swift; sourceTree = "<group>"; };
-		BD56793823297FD3000D0C02 /* MeditationPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationPlayerViewController.swift; sourceTree = "<group>"; };
 		BD56794723332054000D0C02 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		BD56794A233320BB000D0C02 /* RSSFeed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSSFeed.swift; sourceTree = "<group>"; };
 		BD56794B233320BC000D0C02 /* CMTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CMTime.swift; sourceTree = "<group>"; };
@@ -79,12 +80,15 @@
 		BD56795A233321B6000D0C02 /* Podcast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Podcast.swift; sourceTree = "<group>"; };
 		BD56795C2333D80C000D0C02 /* BlogDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = BlogDetailView.xib; path = EOS/Views/BlogDetailView.xib; sourceTree = SOURCE_ROOT; };
 		BD56795E23341B25000D0C02 /* BlogDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogDetailView.swift; sourceTree = "<group>"; };
+		BDBEC0A32342889F00FB1DAF /* EOS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EOS.xcdatamodel; sourceTree = "<group>"; };
+		BDBEC0A52342907900FB1DAF /* GoalSetterMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GoalSetterMainView.xib; sourceTree = "<group>"; };
+		BDBEC0A72342914D00FB1DAF /* GoalSetterMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalSetterMainView.swift; sourceTree = "<group>"; };
+		BDBEC0A923429E1200FB1DAF /* GoalSetterGoalsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalSetterGoalsListViewController.swift; sourceTree = "<group>"; };
 		BDC049C223357EE800E76E4A /* EpisodeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EpisodeTableViewCell.xib; sourceTree = "<group>"; };
 		BDC049C323357EE800E76E4A /* EpisodeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EpisodeTableViewCell.swift; sourceTree = "<group>"; };
 		BDC049C423357EE900E76E4A /* PlayerDetailsView+Gestures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PlayerDetailsView+Gestures.swift"; sourceTree = "<group>"; };
 		BDC049C523357EE900E76E4A /* PlayerDetailsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerDetailsView.swift; sourceTree = "<group>"; };
 		BDC049C623357EE900E76E4A /* PlayerDetailsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerDetailsView.xib; sourceTree = "<group>"; };
-		BDC049CC233999B900E76E4A /* GoalMenuView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GoalMenuView.xib; sourceTree = "<group>"; };
 		BE8DE4D0DC539F5171EB998C /* Pods-EOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EOS.debug.xcconfig"; path = "Target Support Files/Pods-EOS/Pods-EOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -138,7 +142,6 @@
 		BD0F8DB5232098B500ACCAC0 /* EOS */ = {
 			isa = PBXGroup;
 			children = (
-				BD0F8DB6232098B500ACCAC0 /* AppDelegate.swift */,
 				BD5679462333203E000D0C02 /* Networking */,
 				BD567949233320A1000D0C02 /* Helpers */,
 				BD5679232323289A000D0C02 /* Models */,
@@ -148,6 +151,8 @@
 				BD0F8DBD232098B600ACCAC0 /* Assets.xcassets */,
 				BD0F8DBF232098B600ACCAC0 /* LaunchScreen.storyboard */,
 				BD0F8DC2232098B600ACCAC0 /* Info.plist */,
+				BDBEC0A22342889F00FB1DAF /* EOS.xcdatamodeld */,
+				BD0F8DB6232098B500ACCAC0 /* AppDelegate.swift */,
 			);
 			path = EOS;
 			sourceTree = "<group>";
@@ -170,7 +175,6 @@
 				BD56792923280AF0000D0C02 /* BlogCell.swift */,
 				BD56795C2333D80C000D0C02 /* BlogDetailView.xib */,
 				BD56795E23341B25000D0C02 /* BlogDetailView.swift */,
-				BDC049CC233999B900E76E4A /* GoalMenuView.xib */,
 				BD56792E2328B19B000D0C02 /* MeditationCell.xib */,
 				BD5679302328B34A000D0C02 /* MeditationCell.swift */,
 				BDC049C223357EE800E76E4A /* EpisodeTableViewCell.xib */,
@@ -178,6 +182,8 @@
 				BDC049C523357EE900E76E4A /* PlayerDetailsView.swift */,
 				BDC049C623357EE900E76E4A /* PlayerDetailsView.xib */,
 				BDC049C423357EE900E76E4A /* PlayerDetailsView+Gestures.swift */,
+				BDBEC0A52342907900FB1DAF /* GoalSetterMainView.xib */,
+				BDBEC0A72342914D00FB1DAF /* GoalSetterMainView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -189,8 +195,8 @@
 				BD0F8DB8232098B500ACCAC0 /* BlogViewController.swift */,
 				BD5679172320B9F1000D0C02 /* PodcastViewController.swift */,
 				BD56791B2320BDF5000D0C02 /* GoalSetterViewController.swift */,
+				BDBEC0A923429E1200FB1DAF /* GoalSetterGoalsListViewController.swift */,
 				BD5679192320BB6E000D0C02 /* MeditationViewController.swift */,
-				BD56793823297FD3000D0C02 /* MeditationPlayerViewController.swift */,
 				BD56791D23217463000D0C02 /* ShopViewController.swift */,
 			);
 			path = Controllers;
@@ -281,8 +287,8 @@
 				BD0F8DC1232098B600ACCAC0 /* LaunchScreen.storyboard in Resources */,
 				BDC049C723357EE900E76E4A /* EpisodeTableViewCell.xib in Resources */,
 				BD56792F2328B19B000D0C02 /* MeditationCell.xib in Resources */,
+				BDBEC0A62342907900FB1DAF /* GoalSetterMainView.xib in Resources */,
 				BD0F8DBE232098B600ACCAC0 /* Assets.xcassets in Resources */,
-				BDC049CD233999B900E76E4A /* GoalMenuView.xib in Resources */,
 				BD5679282323377C000D0C02 /* BlogCell.xib in Resources */,
 				BDC049CB23357EE900E76E4A /* PlayerDetailsView.xib in Resources */,
 				BD56795D2333D80C000D0C02 /* BlogDetailView.xib in Resources */,
@@ -353,7 +359,6 @@
 				BDC049C823357EE900E76E4A /* EpisodeTableViewCell.swift in Sources */,
 				BD567920232175BB000D0C02 /* Colors.swift in Sources */,
 				BD5679312328B34A000D0C02 /* MeditationCell.swift in Sources */,
-				BD56793923297FD3000D0C02 /* MeditationPlayerViewController.swift in Sources */,
 				BD567951233320BC000D0C02 /* RSSFeed.swift in Sources */,
 				BD56794823332054000D0C02 /* API.swift in Sources */,
 				BD0F8DB9232098B500ACCAC0 /* BlogViewController.swift in Sources */,
@@ -365,8 +370,11 @@
 				BDC049CA23357EE900E76E4A /* PlayerDetailsView.swift in Sources */,
 				BD567956233320BC000D0C02 /* ReuseIdentifier.swift in Sources */,
 				BD56795B233321B6000D0C02 /* Podcast.swift in Sources */,
+				BDBEC0A82342914D00FB1DAF /* GoalSetterMainView.swift in Sources */,
+				BDBEC0AA23429E1200FB1DAF /* GoalSetterGoalsListViewController.swift in Sources */,
 				BD56795923332191000D0C02 /* Episode.swift in Sources */,
 				BD567957233320BC000D0C02 /* UIApplication.swift in Sources */,
+				BDBEC0A42342889F00FB1DAF /* EOS.xcdatamodeld in Sources */,
 				BD567954233320BC000D0C02 /* UserDefaults.swift in Sources */,
 				BDC049C923357EE900E76E4A /* PlayerDetailsView+Gestures.swift in Sources */,
 				BD567925232328B0000D0C02 /* Blog.swift in Sources */,
@@ -567,6 +575,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BDBEC0A22342889F00FB1DAF /* EOS.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BDBEC0A32342889F00FB1DAF /* EOS.xcdatamodel */,
+			);
+			currentVersion = BDBEC0A32342889F00FB1DAF /* EOS.xcdatamodel */;
+			path = EOS.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = BD0F8DAB232098B500ACCAC0 /* Project object */;
 }

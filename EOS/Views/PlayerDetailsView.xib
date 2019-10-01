@@ -75,19 +75,36 @@
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="rFL-x2-VzW">
                     <rect key="frame" x="24" y="20" width="327" height="623"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MBI-xP-seK">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vpe-tS-qyO">
                             <rect key="frame" x="0.0" y="0.0" width="327" height="44"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="down" translatesAutoresizingMaskIntoConstraints="NO" id="seh-9f-gX3">
+                                    <rect key="frame" x="0.0" y="0.0" width="327" height="44"/>
+                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </imageView>
+                                <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MBI-xP-seK">
+                                    <rect key="frame" x="0.0" y="0.0" width="327" height="44"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="44" id="bQA-Jq-eC9"/>
+                                    </constraints>
+                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <connections>
+                                        <action selector="handleDismiss:" destination="BKl-9u-vzN" eventType="touchUpInside" id="MiM-aw-xV6"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="44" id="bQA-Jq-eC9"/>
+                                <constraint firstItem="seh-9f-gX3" firstAttribute="leading" secondItem="Vpe-tS-qyO" secondAttribute="leading" id="2Vy-aU-nag"/>
+                                <constraint firstAttribute="bottom" secondItem="MBI-xP-seK" secondAttribute="bottom" id="HMH-ro-Zbo"/>
+                                <constraint firstItem="MBI-xP-seK" firstAttribute="leading" secondItem="Vpe-tS-qyO" secondAttribute="leading" id="R9u-NK-WWw"/>
+                                <constraint firstItem="MBI-xP-seK" firstAttribute="top" secondItem="Vpe-tS-qyO" secondAttribute="top" id="TPk-9j-Jm7"/>
+                                <constraint firstAttribute="trailing" secondItem="MBI-xP-seK" secondAttribute="trailing" id="iQk-ja-y8U"/>
+                                <constraint firstAttribute="trailing" secondItem="seh-9f-gX3" secondAttribute="trailing" id="mA3-Sg-sqK"/>
+                                <constraint firstItem="seh-9f-gX3" firstAttribute="top" secondItem="Vpe-tS-qyO" secondAttribute="top" id="nmd-eQ-9JV"/>
+                                <constraint firstAttribute="bottom" secondItem="seh-9f-gX3" secondAttribute="bottom" id="vsI-Lu-nlM"/>
                             </constraints>
-                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
-                            <state key="normal" title="Dismiss">
-                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </state>
-                            <connections>
-                                <action selector="handleDismiss:" destination="BKl-9u-vzN" eventType="touchUpInside" id="MiM-aw-xV6"/>
-                            </connections>
-                        </button>
+                        </view>
                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appicon" translatesAutoresizingMaskIntoConstraints="NO" id="8nB-WG-aWV">
                             <rect key="frame" x="0.0" y="49" width="327" height="327"/>
                             <constraints>
@@ -276,6 +293,7 @@
     </objects>
     <resources>
         <image name="appicon" width="60" height="60"/>
+        <image name="down" width="96" height="96"/>
         <image name="fastforward15" width="45.5" height="45.5"/>
         <image name="max_volume" width="32.5" height="32.5"/>
         <image name="muted_volume" width="32.5" height="32.5"/>

@@ -134,7 +134,12 @@ class PodcastViewController: UITableViewController {
     //MARK:- Variable height support
 
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 250
+        if(UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.pad){
+            return 500
+        }
+        else {
+            return 250
+        }
     }
 
     override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
