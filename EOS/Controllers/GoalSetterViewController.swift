@@ -10,35 +10,86 @@ import UIKit
 
 class GoalSetterViewController: UIViewController {
     
+    let setGoalButton: UIButton = {
+        let button = UIButton(type: .custom)
+        button.setBackgroundImage(#imageLiteral(resourceName: "Pier"), for: .normal)
+        button.layoutIfNeeded()
+        button.subviews.first?.contentMode = .scaleAspectFill
+        button.layer.masksToBounds = true
+        button.layer.cornerRadius = 15
+        button.addTarget(self, action: #selector(setGoalButtonClicked), for: .touchUpInside)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+    
+    let goalListButton: UIButton = {
+        let button = UIButton(type: .custom)
+        button.setBackgroundImage(#imageLiteral(resourceName: "Book"), for: .normal)
+        button.layoutIfNeeded()
+        button.subviews.first?.contentMode = .scaleAspectFill
+        button.layer.masksToBounds = true
+        button.layer.cornerRadius = 15
+        button.addTarget(self, action: #selector(goalsListButtonClicked), for: .touchUpInside)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+    
+    let backgroundImage: UIImageView = {
+        let imageView = UIImageView(image: #imageLiteral(resourceName: "mountainBackground"))
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.contentMode = UIView.ContentMode.scaleAspectFill
+        return imageView
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Goals"
-//        let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
-//        backgroundImage.image = UIImage(named: "mountainBackground")
-//        backgroundImage.contentMode = UIView.ContentMode.scaleAspectFill
-//        self.view.insertSubview(backgroundImage, at: 0)
-//
-        let button: UIButton = UIButton(frame: CGRect(x: 100, y: 100, width: 100, height: 50))
-        button.backgroundColor = .black
-        button.setTitle("Button", for: .normal)
-        button.addTarget(self, action:#selector(self.buttonClicked), for: .touchUpInside)
-        self.view.addSubview(button)
         
+        self.title = "Goals"
+
+        view.addSubview(backgroundImage)
+        view.addSubview(setGoalButton)
+        view.addSubview(goalListButton)
         
 //        let GoalSetterMainView = Bundle.main.loadNibNamed("GoalSetterMainView", owner: self, options: nil)?.first as! GoalSetterMainView
 //
 //        self.view = GoalSetterMainView
         
-        
-        
+        setupLayout()
     }
     
-    @objc func buttonClicked() {
-        print("Button Clicked")
-        let gsglvc = GoalSetterGoalsListViewController()
+    private func setupLayout() {
         
-        self.navigationController?.pushViewController(gsglvc, animated: true)
+        // Background Image
+        backgroundImage.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        backgroundImage.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        backgroundImage.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
+        backgroundImage.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
+        
+        // Set a new goal button
+        setGoalButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 100).isActive = true
+        setGoalButton.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 30).isActive = true
+        setGoalButton.heightAnchor.constraint(equalToConstant: 200).isActive = true
+        setGoalButton.widthAnchor.constraint(equalToConstant: 160).isActive = true
+        
+        // Set a new goal button
+        goalListButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 100).isActive = true
+        goalListButton.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -30).isActive = true
+        goalListButton.heightAnchor.constraint(equalToConstant: 200).isActive = true
+        goalListButton.widthAnchor.constraint(equalToConstant: 160).isActive = true
+    }
+    
+    @objc func goalsListButtonClicked() {
+        print("goals list Button Clicked")
+        let gtvc = GoalsTableViewController()
+
+        self.navigationController?.pushViewController(gtvc, animated: true)
+    }
+    
+    @objc func setGoalButtonClicked() {
+        print("set goal Button Clicked")
+        let gtvc = GoalsTableViewController()
+
+        self.navigationController?.pushViewController(gtvc, animated: true)
     }
     
 }

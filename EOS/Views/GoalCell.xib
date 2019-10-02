@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="281" id="Jgk-ek-XAG" userLabel="Goal Cell" customClass="GoalCell" customModule="EOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="604" height="281"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Jgk-ek-XAG" id="4q2-48-n1o">
+                <rect key="frame" x="0.0" y="0.0" width="604" height="280.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cellBackground" translatesAutoresizingMaskIntoConstraints="NO" id="hp7-6Q-WIp" userLabel="Goal Cell Image View">
+                        <rect key="frame" x="10" y="10" width="584" height="260.5"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="15"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CaA-1J-5un" userLabel="Goal Title Label">
+                        <rect key="frame" x="30" y="216.5" width="52" height="24"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NPx-dX-OhE" userLabel="Goal Deadline Label">
+                        <rect key="frame" x="30" y="241.5" width="32.5" height="15"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="CaA-1J-5un" secondAttribute="bottom" constant="40" id="2Hq-QJ-8eS"/>
+                    <constraint firstAttribute="trailing" secondItem="hp7-6Q-WIp" secondAttribute="trailing" constant="10" id="76o-Ii-k5t"/>
+                    <constraint firstAttribute="bottom" secondItem="NPx-dX-OhE" secondAttribute="bottom" constant="24" id="GmK-OQ-xiZ"/>
+                    <constraint firstItem="CaA-1J-5un" firstAttribute="leading" secondItem="4q2-48-n1o" secondAttribute="leading" constant="30" id="MAh-ID-Nwu"/>
+                    <constraint firstAttribute="bottom" secondItem="hp7-6Q-WIp" secondAttribute="bottom" constant="10" id="TMJ-GX-qXk"/>
+                    <constraint firstItem="NPx-dX-OhE" firstAttribute="leading" secondItem="4q2-48-n1o" secondAttribute="leading" constant="30" id="cJh-jS-BJp"/>
+                    <constraint firstItem="hp7-6Q-WIp" firstAttribute="leading" secondItem="4q2-48-n1o" secondAttribute="leading" constant="10" id="cYb-29-FVp"/>
+                    <constraint firstItem="hp7-6Q-WIp" firstAttribute="top" secondItem="4q2-48-n1o" secondAttribute="top" constant="10" id="cti-wJ-3IG"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="goalCellImageView" destination="hp7-6Q-WIp" id="EOF-jQ-4OJ"/>
+                <outlet property="goalDeadlineLabel" destination="NPx-dX-OhE" id="p7q-a9-v01"/>
+                <outlet property="goalTitleLabel" destination="CaA-1J-5un" id="dty-3P-XAh"/>
+            </connections>
+            <point key="canvasLocation" x="104.34782608695653" y="355.91517857142856"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="cellBackground" width="922" height="478"/>
+    </resources>
+</document>

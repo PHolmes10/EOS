@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="sv9-Rj-kTa" customClass="GoalDetailView" customModule="EOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="City" translatesAutoresizingMaskIntoConstraints="NO" id="l9y-3n-fhc">
+                    <rect key="frame" x="0.0" y="-50" width="414" height="322"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="25"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </imageView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="O6i-5p-KU0">
+                    <rect key="frame" x="16" y="288" width="382" height="574"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0B8-4P-zr8" userLabel="Goal Title Label">
+                            <rect key="frame" x="0.0" y="0.0" width="382" height="26.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oKx-3E-zee" userLabel="Goal Deadline Label">
+                            <rect key="frame" x="0.0" y="26.5" width="382" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ftC-wO-dev">
+                            <rect key="frame" x="0.0" y="47" width="382" height="5"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="5" id="IQp-kv-xyJ"/>
+                            </constraints>
+                        </view>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="R4S-KH-d1W" userLabel="Goal Description View">
+                            <rect key="frame" x="0.0" y="52" width="382" height="522"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
+                    </subviews>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EcX-22-OvM">
+                    <rect key="frame" x="30" y="60" width="60" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="lJN-fi-xgM"/>
+                        <constraint firstAttribute="height" constant="60" id="qVk-Wk-qqL"/>
+                    </constraints>
+                    <state key="normal" image="icons8-back-64"/>
+                    <connections>
+                        <action selector="handleBack:" destination="sv9-Rj-kTa" eventType="touchUpInside" id="bcW-vp-aZ5"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="EcX-22-OvM" firstAttribute="leading" secondItem="yMG-qc-FGv" secondAttribute="leading" constant="30" id="2L1-ea-zKF"/>
+                <constraint firstItem="EcX-22-OvM" firstAttribute="leading" secondItem="yMG-qc-FGv" secondAttribute="leading" constant="30" id="C3i-ak-wrl"/>
+                <constraint firstItem="EcX-22-OvM" firstAttribute="leading" secondItem="yMG-qc-FGv" secondAttribute="leading" constant="30" id="LiX-vd-uRq"/>
+                <constraint firstItem="O6i-5p-KU0" firstAttribute="top" secondItem="l9y-3n-fhc" secondAttribute="bottom" constant="16" id="LuB-p2-iQY"/>
+                <constraint firstItem="yMG-qc-FGv" firstAttribute="bottom" secondItem="O6i-5p-KU0" secondAttribute="bottom" id="Mfj-Nm-zUS"/>
+                <constraint firstItem="EcX-22-OvM" firstAttribute="top" secondItem="sv9-Rj-kTa" secondAttribute="top" constant="60" id="TIW-g5-ggd"/>
+                <constraint firstItem="O6i-5p-KU0" firstAttribute="leading" secondItem="yMG-qc-FGv" secondAttribute="leading" constant="16" id="X50-4Q-y0Z"/>
+                <constraint firstItem="l9y-3n-fhc" firstAttribute="top" secondItem="sv9-Rj-kTa" secondAttribute="top" constant="-50" id="XxV-ZN-UAE"/>
+                <constraint firstItem="l9y-3n-fhc" firstAttribute="leading" secondItem="yMG-qc-FGv" secondAttribute="leading" id="Yz0-Qz-zXa"/>
+                <constraint firstItem="yMG-qc-FGv" firstAttribute="trailing" secondItem="l9y-3n-fhc" secondAttribute="trailing" id="eet-HS-kYY"/>
+                <constraint firstItem="yMG-qc-FGv" firstAttribute="trailing" secondItem="O6i-5p-KU0" secondAttribute="trailing" constant="16" id="gqj-sN-6J4"/>
+                <constraint firstItem="O6i-5p-KU0" firstAttribute="top" secondItem="yMG-qc-FGv" secondAttribute="top" constant="244" id="utn-PA-yNY"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="yMG-qc-FGv"/>
+            <connections>
+                <outlet property="goalDeadlineLabel" destination="oKx-3E-zee" id="dB8-bs-zg3"/>
+                <outlet property="goalDescriptionView" destination="R4S-KH-d1W" id="w0V-Gf-5KV"/>
+                <outlet property="goalImageView" destination="l9y-3n-fhc" id="695-73-3Y0"/>
+                <outlet property="goalTitleLabel" destination="0B8-4P-zr8" id="9q7-Rb-Ctk"/>
+            </connections>
+            <point key="canvasLocation" x="79.710144927536234" y="73.660714285714278"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="City" width="1920" height="1275"/>
+        <image name="icons8-back-64" width="64" height="64"/>
+    </resources>
+</document>

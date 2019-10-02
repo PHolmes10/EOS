@@ -20,7 +20,7 @@ class GoalSetterMainView: UIView {
         
 //        self.removeFromSuperview()
 
-        let gsglvc = GoalSetterGoalsListViewController()
+        let gsglvc = GoalsTableViewController()
         
         GoalSetterViewController().navigationController?.pushViewController(gsglvc, animated: true)
 

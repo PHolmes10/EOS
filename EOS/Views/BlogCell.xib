@@ -19,7 +19,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cellBackground" translatesAutoresizingMaskIntoConstraints="NO" id="zzW-VE-Jjt">
-                        <rect key="frame" x="10" y="12" width="574" height="264.5"/>
+                        <rect key="frame" x="10" y="10" width="574" height="266.5"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -46,7 +46,7 @@
                     <constraint firstAttribute="bottom" secondItem="8dW-dH-Zo7" secondAttribute="bottom" constant="24" id="HwF-Kw-65s"/>
                     <constraint firstAttribute="trailing" secondItem="zzW-VE-Jjt" secondAttribute="trailing" constant="10" id="O1n-zT-7pO"/>
                     <constraint firstItem="AR9-eN-quX" firstAttribute="leading" secondItem="Cgc-QO-jgH" secondAttribute="leading" constant="30" id="XOg-9J-wxu"/>
-                    <constraint firstItem="zzW-VE-Jjt" firstAttribute="top" secondItem="Cgc-QO-jgH" secondAttribute="top" constant="12" id="Z8x-MQ-hLF"/>
+                    <constraint firstItem="zzW-VE-Jjt" firstAttribute="top" secondItem="Cgc-QO-jgH" secondAttribute="top" constant="10" id="Z8x-MQ-hLF"/>
                     <constraint firstAttribute="bottom" secondItem="AR9-eN-quX" secondAttribute="bottom" constant="40" id="j7I-IN-83s"/>
                     <constraint firstAttribute="bottom" secondItem="zzW-VE-Jjt" secondAttribute="bottom" constant="6" id="u4y-nR-oDI"/>
                 </constraints>
