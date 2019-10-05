@@ -113,9 +113,9 @@
                                 </connections>
                             </button>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cff-tt-K3g">
-                                <rect key="frame" x="25" y="84" width="270" height="400"/>
+                                <rect key="frame" x="25" y="64" width="270" height="440"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="2fS-cN-Zv7">
-                                    <rect key="frame" x="0.0" y="0.0" width="270" height="400"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="270" height="440"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="  Goal Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LSr-X0-I4b">
@@ -133,7 +133,7 @@
                                             </userDefinedRuntimeAttributes>
                                         </textField>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="8cM-Rx-17D">
-                                            <rect key="frame" x="8" y="54" width="254" height="189"/>
+                                            <rect key="frame" x="8" y="54" width="254" height="203"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <color key="backgroundColor" red="0.82236570119857788" green="0.70612424612045288" blue="0.66330069303512573" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -146,15 +146,8 @@
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                         </textView>
-                                        <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="fqK-Zf-VrU">
-                                            <rect key="frame" x="8" y="251" width="254" height="107"/>
-                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                            <date key="date" timeIntervalSinceReferenceDate="591928946.93048096">
-                                                <!--2019-10-05 00:42:26 +0000-->
-                                            </date>
-                                        </datePicker>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vW3-9Y-sXn">
-                                            <rect key="frame" x="203" y="362" width="59" height="30"/>
+                                            <rect key="frame" x="203" y="402" width="59" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <color key="backgroundColor" red="0.82236570119999997" green="0.70612424610000002" blue="0.66330069300000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <state key="normal" title="Next">
@@ -170,10 +163,24 @@
                                                 <action selector="next:" destination="069-Z7-qc7" eventType="touchUpInside" id="L02-i4-azw"/>
                                             </connections>
                                         </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Choose a deadline for your goal" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q5V-uC-pwK">
+                                            <rect key="frame" x="8" y="265" width="254" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="fqK-Zf-VrU">
+                                            <rect key="frame" x="8" y="287" width="254" height="107"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                            <date key="date" timeIntervalSinceReferenceDate="591928946.93048096">
+                                                <!--2019-10-05 00:42:26 +0000-->
+                                            </date>
+                                        </datePicker>
                                     </subviews>
                                 </view>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="400" id="1xr-en-nrq"/>
+                                    <constraint firstAttribute="height" constant="440" id="7Hi-fy-4xR"/>
                                     <constraint firstAttribute="width" constant="270" id="OWA-Fz-bsN"/>
                                 </constraints>
                                 <blurEffect style="light"/>
@@ -201,6 +208,7 @@
                         <viewLayoutGuide key="safeArea" id="mZV-fp-iPM"/>
                     </view>
                     <connections>
+                        <outlet property="datePicker" destination="fqK-Zf-VrU" id="ikz-5w-mzz"/>
                         <outlet property="goalDescriptionTextView" destination="8cM-Rx-17D" id="rEW-uP-goc"/>
                     </connections>
                 </viewController>

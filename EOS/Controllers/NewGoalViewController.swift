@@ -13,6 +13,8 @@ class NewGoalViewController: UIViewController, UITextViewDelegate {
     
     @IBOutlet weak var goalDescriptionTextView: UITextView!
     
+    @IBOutlet weak var datePicker: UIDatePicker!
+    
     @IBAction func dismissOutside(_ sender: Any) {
         
         dismiss(animated: true, completion: nil)
@@ -32,6 +34,9 @@ class NewGoalViewController: UIViewController, UITextViewDelegate {
         goalDescriptionTextView.text = "Be as specific as possible when describing your goal"
         goalDescriptionTextView.textColor = placeholderColor
         goalDescriptionTextView.delegate = self
+        
+        datePicker.setValue(UIColor.white, forKeyPath: "textColor")
+        datePicker.minimumDate = Date()
         
     }
     
