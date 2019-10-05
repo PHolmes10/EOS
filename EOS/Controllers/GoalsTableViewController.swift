@@ -17,10 +17,12 @@ class GoalsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let tempImageView = UIImageView(image: UIImage(named: "blueGradient"))
-        tempImageView.frame = self.tableView.frame
-        self.tableView.backgroundView = tempImageView
+        view.backgroundColor = UIColor(red: 162.0 / 255.0, green: 128.0 / 255.0, blue: 118.0 / 255.0, alpha: 1.0)
+//        let tempImageView = UIImageView(image: UIImage(named: "blueGradient"))
+//        tempImageView.frame = self.tableView.frame
+//        self.tableView.backgroundView = tempImageView
         
+    
         setUpTableView()
     }
     

@@ -32,13 +32,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let navBar = UINavigationBar.appearance()
 //        navBar.barTintColor = .blue
         
-        navBar.setBackgroundImage(UIImage(), for: .default)
-        // Sets shadow (line below the bar) to a blank image
-        navBar.shadowImage = UIImage()
-        // Sets the translucent background color
-        navBar.backgroundColor = .clear
-        // Set translucent. (Default value is already true, so this can be removed if desired.)
-        navBar.isTranslucent = true
+//        navBar.setBackgroundImage(UIImage(), for: .default)
+//        // Sets shadow (line below the bar) to a blank image
+//        navBar.shadowImage = UIImage()
+//        // Sets the translucent background color
+//        navBar.backgroundColor = .clear
+//        // Set translucent. (Default value is already true, so this can be removed if desired.)
+        navBar.tintColor = .white
+        navBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white]
+
+//
+//        navBar.isTranslucent = true
         
         return true
     }

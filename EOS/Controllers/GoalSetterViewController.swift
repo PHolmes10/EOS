@@ -5,14 +5,27 @@
 //  Created by Patrick Holmes on 9/4/19.
 //  Copyright © 2019 Patrick Holmes. All rights reserved.
 //
-
+import Foundation
 import UIKit
 
 class GoalSetterViewController: UIViewController {
     
     let setGoalButton: UIButton = {
         let button = UIButton(type: .custom)
+        
+        // blur effect not working (cannot bring background image subview to front, need to find workaround)
+//        let blur = UIVisualEffectView(effect: UIBlurEffect(style:
+//            UIBlurEffect.Style.light))
+//        blur.frame = button.bounds
+//        blur.isUserInteractionEnabled = false //This allows touches to forward to the button.
+//        button.insertSubview(blur, at:0)
+//        button.bringSubviewToFront(button.imageView!)
+
         button.setBackgroundImage(#imageLiteral(resourceName: "Pier"), for: .normal)
+        button.setTitle("Set a New Goal", for: .normal)
+//        button.titleLabel?.backgroundColor = UIColor.red
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 22)
+        button.contentEdgeInsets = UIEdgeInsets(top: 150, left: 0, bottom: 0, right: 0)
         button.layoutIfNeeded()
         button.subviews.first?.contentMode = .scaleAspectFill
         button.layer.masksToBounds = true
@@ -25,6 +38,9 @@ class GoalSetterViewController: UIViewController {
     let goalListButton: UIButton = {
         let button = UIButton(type: .custom)
         button.setBackgroundImage(#imageLiteral(resourceName: "Book"), for: .normal)
+        button.setTitle("My Goals", for: .normal)
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 22)
+        button.contentEdgeInsets = UIEdgeInsets(top: 150, left: 0, bottom: 0, right: 0)
         button.layoutIfNeeded()
         button.subviews.first?.contentMode = .scaleAspectFill
         button.layer.masksToBounds = true
@@ -50,11 +66,10 @@ class GoalSetterViewController: UIViewController {
         view.addSubview(setGoalButton)
         view.addSubview(goalListButton)
         
-//        let GoalSetterMainView = Bundle.main.loadNibNamed("GoalSetterMainView", owner: self, options: nil)?.first as! GoalSetterMainView
-//
-//        self.view = GoalSetterMainView
-        
         setupLayout()
+        
+//        let GoalSetterMainView = Bundle.main.loadNibNamed("GoalSetterMainView", owner: self, options: nil)?.first as! GoalSetterMainView
+//        self.view = GoalSetterMainView
     }
     
     private func setupLayout() {
@@ -80,16 +95,25 @@ class GoalSetterViewController: UIViewController {
     
     @objc func goalsListButtonClicked() {
         print("goals list Button Clicked")
+        
         let gtvc = GoalsTableViewController()
 
         self.navigationController?.pushViewController(gtvc, animated: true)
+        
     }
+    
     
     @objc func setGoalButtonClicked() {
         print("set goal Button Clicked")
-        let gtvc = GoalsTableViewController()
-
-        self.navigationController?.pushViewController(gtvc, animated: true)
+//        let gtvc = GoalsTableViewController()
+//
+//        self.navigationController?.pushViewController(gtvc, animated: true)
+        
+        // Showing Storyboard
+        let storyboard = UIStoryboard(name: "testStoryboard", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "testViewController")
+        
+        self.navigationController?.pushViewController(controller, animated: true)
     }
     
 }

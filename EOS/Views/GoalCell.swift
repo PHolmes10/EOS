@@ -16,4 +16,7 @@ class GoalCell: UITableViewCell {
    
     @IBOutlet weak var goalDeadlineLabel: UILabel!
     
+    
+    
+    
 }
