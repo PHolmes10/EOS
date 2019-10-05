@@ -118,3 +118,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
 }
 
+//access delegate application
+let ad = UIApplication.shared.delegate as! AppDelegate
+//save into database
+let context = ad.persistentContainer.viewContext
+

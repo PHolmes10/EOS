@@ -16,7 +16,10 @@ class GoalCell: UITableViewCell {
    
     @IBOutlet weak var goalDeadlineLabel: UILabel!
     
-    
+    func setGoal(goal: Goals) {
+        goalTitleLabel.text = goal.goalTitle
+        goalDeadlineLabel.text = goal.goalDeadline
+    }
     
     
 }

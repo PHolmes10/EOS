@@ -7,12 +7,19 @@
 //
 
 import UIKit
+import CoreData
 
 class GoalsTableViewController: UITableViewController {
     
 //    var blogs: [Blog] = Blog.fetchBlogs()
     
+    var goals = [Goals]()
+    
     let cellId = "cellId"
+    
+    override func viewWillAppear(_ animated: Bool) {
+        loadGoals()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +33,17 @@ class GoalsTableViewController: UITableViewController {
         setUpTableView()
     }
     
+    func loadGoals() {
+        let fetchRequest:NSFetchRequest<Goals> = Goals.fetchRequest()
+        
+        do {
+            goals = try context.fetch(fetchRequest)
+            self.tableView.reloadData()
+        } catch {
+            print("cannot fetch from database")
+        }
+    }
+    
     fileprivate func setUpTableView() {
         
         let nib = UINib(nibName: "GoalCell", bundle: nil)
@@ -37,12 +55,13 @@ class GoalsTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return goals.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! GoalCell
         
+        cell.setGoal(goal: goals[indexPath.row])
         cell.backgroundColor = UIColor.clear
 //        let blog = blogs[indexPath.row]
 //        cell.blog = blog
