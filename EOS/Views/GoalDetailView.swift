@@ -14,9 +14,10 @@ class GoalDetailView: UIView {
         didSet {
             goalTitleLabel.text = goal.goalTitle
             goalDescriptionView.text = goal.goalDescription
+            goalDeadlineLabel.text = goal.goalDeadline
         }
     }
-
+    
     @IBOutlet weak var goalImageView: UIImageView!
     
     @IBOutlet weak var goalTitleLabel: UILabel!

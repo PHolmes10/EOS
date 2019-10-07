@@ -10,6 +10,9 @@ import UIKit
 
 class GoalCell: UITableViewCell {
 
+    
+    @IBOutlet weak var deleteButton: UIButton!
+    
     @IBOutlet weak var goalCellImageView: UIImageView!
     
     @IBOutlet weak var goalTitleLabel: UILabel!

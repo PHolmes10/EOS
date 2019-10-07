@@ -12,6 +12,8 @@ class NewGoalViewController: UIViewController, UITextViewDelegate {
     
     @IBOutlet weak var goalTitleTextField: UITextField!
     
+    
+    
     @IBOutlet weak var goalDescriptionTextView: UITextView!
     
     @IBOutlet weak var datePicker: UIDatePicker!
@@ -38,6 +40,7 @@ class NewGoalViewController: UIViewController, UITextViewDelegate {
         }
         new?.goalTitle = goalTitleTextField.text
         new?.goalDescription = goalDescriptionTextView.text
+        new?.goalDeadline = formattedDate
         
         do {
             ad.saveContext()
@@ -53,6 +56,14 @@ class NewGoalViewController: UIViewController, UITextViewDelegate {
     
     var editGoals: Goals?
     
+    var formattedDate: String {
+        get {
+            let formatter = DateFormatter()
+            formatter.dateStyle = .medium
+            return formatter.string(from: datePicker.date)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -62,6 +73,9 @@ class NewGoalViewController: UIViewController, UITextViewDelegate {
         
         datePicker.setValue(UIColor.white, forKeyPath: "textColor")
         datePicker.minimumDate = Date()
+        
+        print(formattedDate)
+        
         
         if let goal = editGoals {
             

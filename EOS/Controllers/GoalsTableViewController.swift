@@ -44,6 +44,12 @@ class GoalsTableViewController: UITableViewController {
         }
     }
     
+    // Functionality for delete button
+    @objc func deletePressed(_ sender: UIButton){
+        context.delete(goals[sender.tag])
+        loadGoals()
+    }
+    
     fileprivate func setUpTableView() {
         
         let nib = UINib(nibName: "GoalCell", bundle: nil)
@@ -60,6 +66,9 @@ class GoalsTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! GoalCell
+        
+        cell.deleteButton.tag = indexPath.row
+        cell.deleteButton.addTarget(self, action: #selector(deletePressed(_:)), for: .touchUpInside)
         
         cell.setGoal(goal: goals[indexPath.row])
         cell.backgroundColor = UIColor.clear
