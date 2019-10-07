@@ -10,12 +10,12 @@ import UIKit
 
 class GoalDetailView: UIView {
     
-//    var goal: Goals! {
-//        didSet {
-//            goalTitleLabel.text = goal.goalTitle
-//            goalDescriptionView.text = goal.goalDescription
-//        }
-//    }
+    var goal: Goals! {
+        didSet {
+            goalTitleLabel.text = goal.goalTitle
+            goalDescriptionView.text = goal.goalDescription
+        }
+    }
 
     @IBOutlet weak var goalImageView: UIImageView!
     

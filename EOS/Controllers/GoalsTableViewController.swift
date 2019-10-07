@@ -81,13 +81,13 @@ class GoalsTableViewController: UITableViewController {
     // MARK:- UITableViewDelegate
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let blog = blogs[indexPath.row]
+        let goal = goals[indexPath.row]
         tableView.deselectRow(at: indexPath, animated: true)
         
         let window = UIApplication.shared.keyWindow
         let goalDetailView = Bundle.main.loadNibNamed("GoalDetailView", owner: self, options: nil)?.first as! GoalDetailView
         
-//        goalDetailView.blog = blog
+        goalDetailView.goal = goal
         
         goalDetailView.frame = self.view.frame
         let colors = BlogColors()
