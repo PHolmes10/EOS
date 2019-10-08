@@ -20,7 +20,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appicon" translatesAutoresizingMaskIntoConstraints="NO" id="lwO-Dx-lKu">
-                        <rect key="frame" x="10" y="16" width="60" height="206.5"/>
+                        <rect key="frame" x="10" y="16" width="491" height="206.5"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -29,7 +29,7 @@
                         </userDefinedRuntimeAttributes>
                     </imageView>
                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l8d-DL-Dn9">
-                        <rect key="frame" x="2" y="98" width="76.5" height="34.5"/>
+                        <rect key="frame" x="217.5" y="98" width="76.5" height="34.5"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
@@ -37,7 +37,7 @@
                         <size key="shadowOffset" width="0.0" height="1"/>
                     </label>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Nbd-WG-8kb">
-                        <rect key="frame" x="20" y="130.5" width="400" height="80"/>
+                        <rect key="frame" x="20" y="130.5" width="441" height="80"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="pubDate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WMZ-ZY-TR8">
                                 <rect key="frame" x="0.0" y="0.0" width="75" height="24"/>
@@ -58,9 +58,6 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="400" id="R2y-k1-DmV"/>
-                        </constraints>
                     </stackView>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
