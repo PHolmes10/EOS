@@ -20,7 +20,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appicon" translatesAutoresizingMaskIntoConstraints="NO" id="lwO-Dx-lKu">
-                        <rect key="frame" x="10" y="16" width="491" height="206.5"/>
+                        <rect key="frame" x="10" y="16" width="60" height="206.5"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -29,7 +29,7 @@
                         </userDefinedRuntimeAttributes>
                     </imageView>
                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l8d-DL-Dn9">
-                        <rect key="frame" x="217.5" y="98" width="76.5" height="34.5"/>
+                        <rect key="frame" x="2" y="98" width="76.5" height="34.5"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
@@ -72,6 +72,7 @@
                     <constraint firstItem="Nbd-WG-8kb" firstAttribute="leading" secondItem="BNM-Qa-oNp" secondAttribute="leading" constant="20" id="a4K-AS-tpb"/>
                     <constraint firstItem="l8d-DL-Dn9" firstAttribute="centerX" secondItem="BNM-Qa-oNp" secondAttribute="centerX" id="fvA-EL-Fux"/>
                     <constraint firstItem="lwO-Dx-lKu" firstAttribute="top" secondItem="BNM-Qa-oNp" secondAttribute="top" constant="16" id="lPA-JA-CNq"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Nbd-WG-8kb" secondAttribute="trailing" constant="30" id="sBp-VD-JEv"/>
                     <constraint firstAttribute="trailing" secondItem="lwO-Dx-lKu" secondAttribute="trailing" constant="10" id="yJo-Sf-6XJ"/>
                 </constraints>
             </tableViewCellContentView>

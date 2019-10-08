@@ -74,9 +74,6 @@ class NewGoalViewController: UIViewController, UITextViewDelegate {
         datePicker.setValue(UIColor.white, forKeyPath: "textColor")
         datePicker.minimumDate = Date()
         
-        print(formattedDate)
-        
-        
         if let goal = editGoals {
             
             goalTitleTextField.text = goal.goalTitle
