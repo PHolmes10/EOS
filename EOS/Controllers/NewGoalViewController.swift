@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NewGoalViewController: UIViewController, UITextViewDelegate {
+class NewGoalViewController: UIViewController, UITextViewDelegate, UITextFieldDelegate {
     
     @IBOutlet weak var goalTitleTextField: UITextField!
     
@@ -70,6 +70,7 @@ class NewGoalViewController: UIViewController, UITextViewDelegate {
         goalDescriptionTextView.text = "Be as specific as possible when describing your goal"
         goalDescriptionTextView.textColor = placeholderColor
         goalDescriptionTextView.delegate = self
+        goalTitleTextField.delegate = self
         
         datePicker.setValue(UIColor.white, forKeyPath: "textColor")
         datePicker.minimumDate = Date()
@@ -81,6 +82,11 @@ class NewGoalViewController: UIViewController, UITextViewDelegate {
             
         }
         
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        goalTitleTextField.resignFirstResponder()
+        return true
     }
     
     func textViewDidBeginEditing(_ textView: UITextView) {
