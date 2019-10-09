@@ -18,50 +18,144 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6r0-5S-3hr" userLabel="goalListButton">
-                                <rect key="frame" x="165.5" y="40" width="134.5" height="142"/>
-                                <color key="backgroundColor" red="0.90196078430000004" green="0.1137254902" blue="0.094117647060000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                <state key="normal" title="My Goals" backgroundImage="Pier"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="15"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="myGoalsButton:" destination="Zt7-f4-PEL" eventType="touchUpInside" id="bIC-ft-UTO"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZAs-NS-5Ao" userLabel="newGoalButton">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZSN-hY-hbA" userLabel="newGoalView">
                                 <rect key="frame" x="20" y="40" width="134.5" height="142"/>
-                                <color key="backgroundColor" red="0.90196078430000004" green="0.1137254902" blue="0.094117647060000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                <state key="normal" title="New Goal" backgroundImage="Book"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZAs-NS-5Ao" userLabel="newGoalButton">
+                                        <rect key="frame" x="0.0" y="0.0" width="134.5" height="142"/>
+                                        <color key="backgroundColor" red="0.90196078430000004" green="0.1137254902" blue="0.094117647060000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <state key="normal" image="Book"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="069-Z7-qc7" kind="presentation" modalTransitionStyle="crossDissolve" id="Xn3-uf-8w4"/>
+                                        </connections>
+                                    </button>
+                                    <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DcH-wn-9Hc">
+                                        <rect key="frame" x="0.0" y="102" width="134.5" height="40"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="RCb-hZ-RpX">
+                                            <rect key="frame" x="0.0" y="0.0" width="134.5" height="40"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Goal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Oa-16-fVb">
+                                                    <rect key="frame" x="27" y="9.5" width="80.5" height="21.5"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="9Oa-16-fVb" firstAttribute="centerX" secondItem="RCb-hZ-RpX" secondAttribute="centerX" id="YGP-1T-Z8S"/>
+                                                <constraint firstItem="9Oa-16-fVb" firstAttribute="centerY" secondItem="RCb-hZ-RpX" secondAttribute="centerY" id="hed-nd-bv3"/>
+                                            </constraints>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Hr4-jJ-6Sd"/>
+                                        </constraints>
+                                        <blurEffect style="light"/>
+                                    </visualEffectView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="DcH-wn-9Hc" firstAttribute="leading" secondItem="ZSN-hY-hbA" secondAttribute="leading" id="F5b-vu-sdS"/>
+                                    <constraint firstItem="ZAs-NS-5Ao" firstAttribute="top" secondItem="ZSN-hY-hbA" secondAttribute="top" id="HFV-8s-scm"/>
+                                    <constraint firstAttribute="trailing" secondItem="ZAs-NS-5Ao" secondAttribute="trailing" id="Xqe-Oy-81H"/>
+                                    <constraint firstAttribute="bottom" secondItem="DcH-wn-9Hc" secondAttribute="bottom" id="gWC-Vf-dPS"/>
+                                    <constraint firstAttribute="trailing" secondItem="DcH-wn-9Hc" secondAttribute="trailing" id="rmO-Pp-S1k"/>
+                                    <constraint firstAttribute="bottom" secondItem="ZAs-NS-5Ao" secondAttribute="bottom" id="uzD-aL-Z3X"/>
+                                    <constraint firstItem="ZAs-NS-5Ao" firstAttribute="leading" secondItem="ZSN-hY-hbA" secondAttribute="leading" id="v7e-ym-KZn"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="15"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <segue destination="069-Z7-qc7" kind="presentation" modalTransitionStyle="crossDissolve" id="Xn3-uf-8w4"/>
-                                </connections>
-                            </button>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MG7-vR-thc" userLabel="goalListView">
+                                <rect key="frame" x="165.5" y="40" width="134.5" height="142"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6r0-5S-3hr" userLabel="goalListButton">
+                                        <rect key="frame" x="0.0" y="0.0" width="134.5" height="142"/>
+                                        <color key="backgroundColor" red="0.90196078430000004" green="0.1137254902" blue="0.094117647060000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <state key="normal" title="My Goals" image="Pier"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="myGoalsButton:" destination="Zt7-f4-PEL" eventType="touchUpInside" id="bIC-ft-UTO"/>
+                                        </connections>
+                                    </button>
+                                    <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CJp-bD-lqx" userLabel="Goal List Blur">
+                                        <rect key="frame" x="0.0" y="102" width="134.5" height="40"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="zfM-9N-x3O">
+                                            <rect key="frame" x="0.0" y="0.0" width="134.5" height="40"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Goals" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bNN-KQ-b7k">
+                                                    <rect key="frame" x="28.5" y="9.5" width="78" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="bNN-KQ-b7k" firstAttribute="centerX" secondItem="zfM-9N-x3O" secondAttribute="centerX" id="YfP-xf-GG6"/>
+                                                <constraint firstItem="bNN-KQ-b7k" firstAttribute="centerY" secondItem="zfM-9N-x3O" secondAttribute="centerY" id="qLi-Dc-xBA"/>
+                                            </constraints>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="exG-uU-kMn"/>
+                                        </constraints>
+                                        <blurEffect style="light"/>
+                                    </visualEffectView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="6r0-5S-3hr" secondAttribute="bottom" id="LI5-WG-9aq"/>
+                                    <constraint firstAttribute="bottom" secondItem="CJp-bD-lqx" secondAttribute="bottom" id="PDE-Nh-pF9"/>
+                                    <constraint firstAttribute="trailing" secondItem="6r0-5S-3hr" secondAttribute="trailing" id="c5f-N4-56M"/>
+                                    <constraint firstAttribute="trailing" secondItem="CJp-bD-lqx" secondAttribute="trailing" id="kHQ-mV-Mmp"/>
+                                    <constraint firstItem="6r0-5S-3hr" firstAttribute="top" secondItem="MG7-vR-thc" secondAttribute="top" id="lDD-6N-M5g"/>
+                                    <constraint firstItem="6r0-5S-3hr" firstAttribute="leading" secondItem="MG7-vR-thc" secondAttribute="leading" id="uel-jH-XOv"/>
+                                    <constraint firstItem="CJp-bD-lqx" firstAttribute="leading" secondItem="MG7-vR-thc" secondAttribute="leading" id="wEm-mU-CHR"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.63838207721710205" green="0.50205856561660767" blue="0.45892494916915894" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="fsH-Lb-EkQ" firstAttribute="trailing" secondItem="6r0-5S-3hr" secondAttribute="trailing" constant="20" id="7Df-6T-YOL"/>
-                            <constraint firstItem="ZAs-NS-5Ao" firstAttribute="height" secondItem="CRX-gb-5Ve" secondAttribute="height" multiplier="0.25" id="JYG-9C-K19"/>
-                            <constraint firstItem="6r0-5S-3hr" firstAttribute="top" secondItem="fsH-Lb-EkQ" secondAttribute="top" constant="20" id="QCj-fF-8e3"/>
-                            <constraint firstItem="6r0-5S-3hr" firstAttribute="width" secondItem="ZAs-NS-5Ao" secondAttribute="width" id="SYJ-aa-rjG"/>
-                            <constraint firstItem="ZAs-NS-5Ao" firstAttribute="leading" secondItem="fsH-Lb-EkQ" secondAttribute="leading" constant="20" id="Tb2-2v-BuC"/>
-                            <constraint firstItem="ZAs-NS-5Ao" firstAttribute="top" secondItem="fsH-Lb-EkQ" secondAttribute="top" constant="20" id="aE5-ov-5h0"/>
-                            <constraint firstItem="6r0-5S-3hr" firstAttribute="height" secondItem="ZAs-NS-5Ao" secondAttribute="height" id="nUI-tj-H3L"/>
-                            <constraint firstItem="ZAs-NS-5Ao" firstAttribute="width" secondItem="CRX-gb-5Ve" secondAttribute="width" multiplier="0.42" id="p89-Zw-pQA"/>
+                            <constraint firstItem="fsH-Lb-EkQ" firstAttribute="trailing" secondItem="MG7-vR-thc" secondAttribute="trailing" constant="20" id="14Q-hX-jOj"/>
+                            <constraint firstItem="ZSN-hY-hbA" firstAttribute="top" secondItem="fsH-Lb-EkQ" secondAttribute="top" constant="20" id="1oE-XV-5cc"/>
+                            <constraint firstItem="ZSN-hY-hbA" firstAttribute="leading" secondItem="fsH-Lb-EkQ" secondAttribute="leading" constant="20" id="BCF-Li-WwH"/>
+                            <constraint firstItem="MG7-vR-thc" firstAttribute="width" secondItem="CRX-gb-5Ve" secondAttribute="width" multiplier="0.42" id="dDj-Ml-dPW"/>
+                            <constraint firstItem="MG7-vR-thc" firstAttribute="top" secondItem="fsH-Lb-EkQ" secondAttribute="top" constant="20" id="iV8-mh-AJf"/>
+                            <constraint firstItem="ZSN-hY-hbA" firstAttribute="width" secondItem="CRX-gb-5Ve" secondAttribute="width" multiplier="0.42" id="pue-Lr-84j"/>
+                            <constraint firstItem="ZSN-hY-hbA" firstAttribute="height" secondItem="CRX-gb-5Ve" secondAttribute="height" multiplier="0.25" id="rg9-6Y-xgZ"/>
+                            <constraint firstItem="MG7-vR-thc" firstAttribute="height" secondItem="CRX-gb-5Ve" secondAttribute="height" multiplier="0.25" id="tYb-Go-TZU"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fsH-Lb-EkQ"/>
                     </view>
+                    <connections>
+                        <outlet property="goalListBlur" destination="CJp-bD-lqx" id="Cle-sm-7fk"/>
+                        <outlet property="myGoalsBtn" destination="6r0-5S-3hr" id="Mcs-fm-JWm"/>
+                        <outlet property="newGoalBlur" destination="DcH-wn-9Hc" id="jnw-1j-c1Q"/>
+                        <outlet property="newGoalButton" destination="ZAs-NS-5Ao" id="aVC-C3-CBd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="120-FZ-NH8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -162,6 +256,7 @@
                                             <connections>
                                                 <action selector="next:" destination="069-Z7-qc7" eventType="touchUpInside" id="L02-i4-azw"/>
                                                 <action selector="saveGoal:" destination="069-Z7-qc7" eventType="touchUpInside" id="thL-mh-8y4"/>
+                                                <segue destination="lNq-6n-tVM" kind="show" id="nXe-5V-WJ2"/>
                                             </connections>
                                         </button>
                                     </subviews>

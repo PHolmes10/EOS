@@ -14,6 +14,7 @@ class WellDoneViewController: UIViewController {
     @IBAction func dismissOutside(_ sender: Any) {
         
         dismiss(animated: true, completion: nil)
+        
     }
     
     override func viewDidLoad() {

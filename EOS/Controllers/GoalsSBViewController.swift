@@ -10,6 +10,14 @@ import UIKit
 
 class GoalsSBViewController: UIViewController {
     
+    @IBOutlet weak var newGoalButton: UIButton!
+    
+    @IBOutlet weak var myGoalsBtn: UIButton!
+    
+    @IBOutlet weak var newGoalBlur: UIVisualEffectView!
+    
+    @IBOutlet weak var goalListBlur: UIVisualEffectView!
+    
     @IBAction func myGoalsButton(_ sender: Any) {
         
         let gtvc = GoalsTableViewController()
@@ -17,11 +25,16 @@ class GoalsSBViewController: UIViewController {
         
     }
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         navigationController?.navigationBar.installBlurEffect()
         self.title = "Goals"
-        
+        newGoalButton.imageView?.contentMode = .scaleAspectFill
+        myGoalsBtn.imageView?.contentMode = .scaleAspectFill
+        newGoalBlur.isUserInteractionEnabled = false
+        goalListBlur.isUserInteractionEnabled = false
     }
 }
