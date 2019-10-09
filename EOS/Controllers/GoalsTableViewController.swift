@@ -11,8 +11,6 @@ import CoreData
 
 class GoalsTableViewController: UITableViewController {
     
-//    var blogs: [Blog] = Blog.fetchBlogs()
-    
     var goals = [Goals]()
     
     let cellId = "cellId"
@@ -44,10 +42,21 @@ class GoalsTableViewController: UITableViewController {
         }
     }
     
+    
     // Functionality for delete button
     @objc func deletePressed(_ sender: UIButton){
-        context.delete(goals[sender.tag])
-        loadGoals()
+            let alert = UIAlertController(title: "Are you sure you want to delete this goal?", message: nil, preferredStyle: .alert)
+        self.present(alert, animated: true)
+            alert.addAction(UIAlertAction(title: "Yes", style: .destructive, handler: {action in
+                
+                context.delete(self.goals[sender.tag])
+                self.loadGoals()
+            }))
+        
+            alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
+        
+        
+        
     }
     
     fileprivate func setUpTableView() {

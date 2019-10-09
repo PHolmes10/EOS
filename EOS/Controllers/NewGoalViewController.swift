@@ -97,5 +97,13 @@ class NewGoalViewController: UIViewController, UITextViewDelegate {
             textView.textColor = placeholderColor
         }
     }
+    
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        if text == "\n" {
+            textView.resignFirstResponder()
+            return false
+        }
+        return true
+    }
 }
 
