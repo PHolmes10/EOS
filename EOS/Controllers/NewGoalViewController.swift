@@ -26,7 +26,7 @@ class NewGoalViewController: UIViewController, UITextViewDelegate, UITextFieldDe
     
     @IBAction func next(_ sender: Any) {
         
-        dismiss(animated: true, completion: nil)
+//        dismiss(animated: true, completion: nil)
     }
     
     @IBAction func saveGoal(_ sender: Any) {
@@ -44,7 +44,7 @@ class NewGoalViewController: UIViewController, UITextViewDelegate, UITextFieldDe
         
         do {
             ad.saveContext()
-            self.dismiss(animated: true, completion: nil)
+//            self.dismiss(animated: true, completion: nil)
         } catch {
             print("cannot save")
         }
