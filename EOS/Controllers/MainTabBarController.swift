@@ -29,20 +29,20 @@ class MainTabBarController: UITabBarController {
 
         delegate = self
         
-        let blogController =  BlogViewController()
+        let blogController =  UINavigationController(rootViewController: BlogViewController())
         blogController.tabBarItem.title = "Blog"
         blogController.tabBarItem.image = #imageLiteral(resourceName: "blog")
         blogController.tabBarItem.imageInsets = UIEdgeInsets(top: 7, left: 0, bottom: -7, right: 0)
         
-        let podcastController = PodcastViewController()
+        let podcastController = UINavigationController(rootViewController: PodcastViewController())
         podcastController.tabBarItem.title = "Podcast"
         podcastController.tabBarItem.image = #imageLiteral(resourceName: "podcast")
         podcastController.tabBarItem.imageInsets = UIEdgeInsets(top: 8, left: 0, bottom: -8, right: 0)
         
         // Use the following code to wrap in navigation controller for navbar title etc.
-//        let meditationController = UINavigationController(rootViewController: MeditationViewController())
-        let meditationController =  MeditationViewController()
-        meditationController.tabBarItem.title = "Meditation"
+        let meditationController = UINavigationController(rootViewController: MeditationViewController())
+//        let meditationController =  MeditationViewController()
+        meditationController.tabBarItem.title = "Meditations"
         meditationController.tabBarItem.image = #imageLiteral(resourceName: "meditation")
         meditationController.tabBarItem.imageInsets = UIEdgeInsets(top: 8, left: 0, bottom: -8, right: 0)
         
@@ -57,7 +57,7 @@ class MainTabBarController: UITabBarController {
         goalSetterController.tabBarItem.image = #imageLiteral(resourceName: "goalSetter")
         goalSetterController.tabBarItem.imageInsets = UIEdgeInsets(top: 8, left: 0, bottom: -8, right: 0)
         
-        let shopController = ShopViewController()
+        let shopController = UINavigationController(rootViewController: ShopViewController())
         shopController.tabBarItem.title = "Shop"
         shopController.tabBarItem.image = #imageLiteral(resourceName: "shop")
         shopController.tabBarItem.imageInsets = UIEdgeInsets(top: 8, left: 0, bottom: -8, right: 0)

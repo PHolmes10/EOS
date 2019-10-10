@@ -25,7 +25,12 @@ class ShopViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-
+        navigationController?.navigationBar.installBlurEffect()
+        self.title = "Shop"
+        
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.black]
+//        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.black]
+        
         let myURL = URL(string:"https://www.theevolutionofsuccess.com/blueprint-video-series-v1")
         let myRequest = URLRequest(url: myURL!)
         webView.load(myRequest)

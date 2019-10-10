@@ -17,7 +17,7 @@ class BlogViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
+        navigationController?.navigationBar.installBlurEffect()
         self.title = "Blog"
 // Background layout and colors
         

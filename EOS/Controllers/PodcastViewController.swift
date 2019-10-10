@@ -27,6 +27,8 @@ class PodcastViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationController?.navigationBar.installBlurEffect()
+        self.title = "Podcast"
         
         let tempImageView = UIImageView(image: UIImage(named: "blueGradient"))
         tempImageView.frame = self.tableView.frame

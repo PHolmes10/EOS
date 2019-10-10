@@ -42,6 +42,8 @@ class MeditationViewController: UITableViewController {
 //        let backgroundLayer = colors.gl
 //        backgroundLayer?.frame = view.frame
 //        view.layer.insertSublayer(backgroundLayer!, at: 0)
+        navigationController?.navigationBar.installBlurEffect()
+        self.title = "Meditations"
         
         let tempImageView = UIImageView(image: UIImage(named: "blueGradient"))
         tempImageView.frame = self.tableView.frame
