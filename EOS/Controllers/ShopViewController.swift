@@ -47,7 +47,7 @@ class ShopViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
         webView.topAnchor.constraint(equalTo: self.view.topAnchor, constant: (navBarHeight)).isActive = true
         webView.leftAnchor.constraint(equalTo: self.view.leftAnchor).isActive = true
         webView.rightAnchor.constraint(equalTo: self.view.rightAnchor).isActive = true
-        webView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
+        webView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: (-150)).isActive = true
 
         let request = URLRequest(url: url)
         webView.load(request)
