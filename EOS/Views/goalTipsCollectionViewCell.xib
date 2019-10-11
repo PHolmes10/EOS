@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="goalTipsCollectionViewCell" customModule="EOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="447" height="813"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="447" height="813"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EQZ-gf-Nwm">
+                        <rect key="frame" x="10" y="0.0" width="427" height="803"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Landscape" translatesAutoresizingMaskIntoConstraints="NO" id="bpK-sP-XJN" userLabel="Goal Tip Image">
+                                <rect key="frame" x="163.5" y="10" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="WaB-cD-735"/>
+                                    <constraint firstAttribute="width" constant="100" id="ydy-ua-RrA"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IVO-vO-jKV" userLabel="Goal Tip Text View">
+                                <rect key="frame" x="90" y="120" width="247" height="683"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="bpK-sP-XJN" firstAttribute="top" secondItem="EQZ-gf-Nwm" secondAttribute="top" constant="10" id="3dB-Wh-M0M"/>
+                            <constraint firstItem="IVO-vO-jKV" firstAttribute="leading" secondItem="EQZ-gf-Nwm" secondAttribute="leading" constant="90" id="7gw-k0-gnV"/>
+                            <constraint firstAttribute="bottom" secondItem="IVO-vO-jKV" secondAttribute="bottom" id="LQw-e2-gIH"/>
+                            <constraint firstItem="IVO-vO-jKV" firstAttribute="top" secondItem="bpK-sP-XJN" secondAttribute="bottom" constant="10" id="Tls-x1-xi1"/>
+                            <constraint firstItem="bpK-sP-XJN" firstAttribute="centerX" secondItem="EQZ-gf-Nwm" secondAttribute="centerX" id="czc-uo-lZ3"/>
+                            <constraint firstAttribute="trailing" secondItem="IVO-vO-jKV" secondAttribute="trailing" constant="90" id="w4v-NR-dcu"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="EQZ-gf-Nwm" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="JuT-eo-w2r"/>
+                <constraint firstItem="EQZ-gf-Nwm" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="a29-tR-VKP"/>
+                <constraint firstAttribute="bottom" secondItem="EQZ-gf-Nwm" secondAttribute="bottom" constant="10" id="efH-Jo-8ZC"/>
+                <constraint firstAttribute="trailing" secondItem="EQZ-gf-Nwm" secondAttribute="trailing" constant="10" id="wYI-ZP-Eph"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="447" height="813"/>
+            <connections>
+                <outlet property="goalTipsImageView" destination="bpK-sP-XJN" id="vo7-Z9-Kva"/>
+                <outlet property="goalTipsTextView" destination="IVO-vO-jKV" id="hJK-xW-Rvc"/>
+            </connections>
+            <point key="canvasLocation" x="36.956521739130437" y="164.39732142857142"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Landscape" width="1280" height="800"/>
+    </resources>
+</document>

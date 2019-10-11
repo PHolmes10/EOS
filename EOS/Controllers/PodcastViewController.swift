@@ -16,8 +16,6 @@ class PodcastViewController: UITableViewController {
     var podcast: Podcast?
     {
         didSet {
-            //      navigationItem.title = "Mindset and Marketing Podcast"
-            print("didSet")
             fetchEpisodes()
         }
     }
@@ -52,10 +50,8 @@ class PodcastViewController: UITableViewController {
         tableView.reloadData()
         APIService.shared.fetchPodcasts(term: term) { podcasts in
             self.podcasts = podcasts
-            print(podcasts)
             self.findEpisodes()
             self.tableView.reloadData()
-            print("findPodcastDone")
         }
 
     }
@@ -64,18 +60,15 @@ class PodcastViewController: UITableViewController {
         let episodesViewController = self
         episodesViewController.podcast = podcasts[0]
         //        navigationController?.pushViewController(episodesViewController, animated: true)
-        print("findEpisodes")
     }
 
     fileprivate func fetchEpisodes() {
         guard let feedUrl = podcast?.feedUrl else { return }
-        print("fetchEpisodes1")
         APIService.shared.fetchEpisodes(feedUrl: feedUrl) { [weak self] (episodes) in
             guard let `self` = self else { return }
             self.episodes = episodes
             DispatchQueue.main.async {
                 self.tableView.reloadData()
-                print("fetchEpisodesMainThread")
             }
         }
     }
@@ -106,7 +99,6 @@ class PodcastViewController: UITableViewController {
         tableView.deselectRow(at: indexPath, animated: true)
         let mainTabBarController = UIApplication.shared.keyWindow?.rootViewController as? MainTabBarController
         mainTabBarController?.maximizePlayerDetails(episode: episode, playlistEpisodes: self.episodes)
-        print("this is episode", episode.title)
     }
 
 

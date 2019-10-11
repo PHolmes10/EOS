@@ -36,6 +36,8 @@
 		BD56795B233321B6000D0C02 /* Podcast.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD56795A233321B6000D0C02 /* Podcast.swift */; };
 		BD56795D2333D80C000D0C02 /* BlogDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD56795C2333D80C000D0C02 /* BlogDetailView.xib */; };
 		BD56795F23341B25000D0C02 /* BlogDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD56795E23341B25000D0C02 /* BlogDetailView.swift */; };
+		BD5DA4F8234FD63800E72B05 /* goalTipsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5DA4F6234FD63800E72B05 /* goalTipsCollectionViewCell.swift */; };
+		BD5DA4F9234FD63800E72B05 /* goalTipsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD5DA4F7234FD63800E72B05 /* goalTipsCollectionViewCell.xib */; };
 		BD7AB5142346A6E300DDB62B /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7AB5132346A6E300DDB62B /* NavigationBar.swift */; };
 		BDBEC0A42342889F00FB1DAF /* EOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BDBEC0A22342889F00FB1DAF /* EOS.xcdatamodeld */; };
 		BDBEC0AA23429E1200FB1DAF /* GoalsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBEC0A923429E1200FB1DAF /* GoalsTableViewController.swift */; };
@@ -87,6 +89,8 @@
 		BD56795A233321B6000D0C02 /* Podcast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Podcast.swift; sourceTree = "<group>"; };
 		BD56795C2333D80C000D0C02 /* BlogDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = BlogDetailView.xib; path = EOS/Views/BlogDetailView.xib; sourceTree = SOURCE_ROOT; };
 		BD56795E23341B25000D0C02 /* BlogDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogDetailView.swift; sourceTree = "<group>"; };
+		BD5DA4F6234FD63800E72B05 /* goalTipsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = goalTipsCollectionViewCell.swift; sourceTree = "<group>"; };
+		BD5DA4F7234FD63800E72B05 /* goalTipsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = goalTipsCollectionViewCell.xib; sourceTree = "<group>"; };
 		BD7AB5132346A6E300DDB62B /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
 		BDBEC0A32342889F00FB1DAF /* EOS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EOS.xcdatamodel; sourceTree = "<group>"; };
 		BDBEC0A923429E1200FB1DAF /* GoalsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsTableViewController.swift; sourceTree = "<group>"; };
@@ -200,6 +204,8 @@
 				BDBEC0AF2343DD6500FB1DAF /* GoalDetailView.xib */,
 				BDBEC0B12343DD7700FB1DAF /* GoalDetailView.swift */,
 				BDF3B7672345755400F6906E /* GoalsSB.storyboard */,
+				BD5DA4F6234FD63800E72B05 /* goalTipsCollectionViewCell.swift */,
+				BD5DA4F7234FD63800E72B05 /* goalTipsCollectionViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -323,6 +329,7 @@
 				BD5679282323377C000D0C02 /* BlogCell.xib in Resources */,
 				BDC049CB23357EE900E76E4A /* PlayerDetailsView.xib in Resources */,
 				BD56795D2333D80C000D0C02 /* BlogDetailView.xib in Resources */,
+				BD5DA4F9234FD63800E72B05 /* goalTipsCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,6 +370,7 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/FeedKit/FeedKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/UPCarouselFlowLayout/UPCarouselFlowLayout.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -371,6 +379,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FeedKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UPCarouselFlowLayout.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -412,6 +421,7 @@
 				BD567957233320BC000D0C02 /* UIApplication.swift in Sources */,
 				BDBEC0A42342889F00FB1DAF /* EOS.xcdatamodeld in Sources */,
 				BD567954233320BC000D0C02 /* UserDefaults.swift in Sources */,
+				BD5DA4F8234FD63800E72B05 /* goalTipsCollectionViewCell.swift in Sources */,
 				BDC049C923357EE900E76E4A /* PlayerDetailsView+Gestures.swift in Sources */,
 				BD567925232328B0000D0C02 /* Blog.swift in Sources */,
 				BD567955233320BC000D0C02 /* Constants.swift in Sources */,

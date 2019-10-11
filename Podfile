@@ -9,5 +9,7 @@ target 'EOS' do
 pod 'Alamofire', '~> 4.5'
 pod 'FeedKit', '~> 6.0'
 pod 'Kingfisher', '~> 5.0'
+pod 'UPCarouselFlowLayout'
+
 
 end

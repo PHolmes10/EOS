@@ -11,40 +11,41 @@ import UIKit
 class MainTabBarController: UITabBarController {
     
     let layerGradient = CAGradientLayer()
-    var circle: UIView?
+//    var circle: UIView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupPlayerDetailsView()
         
-        let numberOfItems = CGFloat(5)
-        let tabBarItemSize = CGSize(width: (tabBar.frame.width / numberOfItems) - 20, height: tabBar.frame.height)
-        circle = UIView(frame: CGRect(x: 0, y: 0, width: (tabBarItemSize.height)+20, height: (tabBarItemSize.height)+20))
-        circle?.backgroundColor = UIColor(red: 60.0 / 255.0, green: 78.0 / 255.0, blue: 91.0 / 255.0, alpha: 1.0)
-        circle?.layer.cornerRadius = circle!.frame.width/2
-        circle?.alpha = 0
-        tabBar.addSubview(circle!)
-        tabBar.sendSubviewToBack(circle!)
+        //tabBarItem Circle Effect
+//        let numberOfItems = CGFloat(5)
+//        let tabBarItemSize = CGSize(width: (tabBar.frame.width / numberOfItems) - 20, height: tabBar.frame.height)
+//        circle = UIView(frame: CGRect(x: 0, y: 0, width: (tabBarItemSize.height)+20, height: (tabBarItemSize.height)+20))
+//        circle?.backgroundColor = UIColor(red: 60.0 / 255.0, green: 78.0 / 255.0, blue: 91.0 / 255.0, alpha: 1.0)
+//        circle?.layer.cornerRadius = circle!.frame.width/2
+//        circle?.alpha = 0
+//        tabBar.addSubview(circle!)
+//        tabBar.sendSubviewToBack(circle!)
 
         delegate = self
         
         let blogController =  UINavigationController(rootViewController: BlogViewController())
         blogController.tabBarItem.title = "Blog"
         blogController.tabBarItem.image = #imageLiteral(resourceName: "blog")
-        blogController.tabBarItem.imageInsets = UIEdgeInsets(top: 7, left: 0, bottom: -7, right: 0)
+        blogController.tabBarItem.imageInsets = UIEdgeInsets(top: 1, left: 0, bottom: -1, right: 0)
         
         let podcastController = UINavigationController(rootViewController: PodcastViewController())
         podcastController.tabBarItem.title = "Podcast"
         podcastController.tabBarItem.image = #imageLiteral(resourceName: "podcast")
-        podcastController.tabBarItem.imageInsets = UIEdgeInsets(top: 8, left: 0, bottom: -8, right: 0)
+        podcastController.tabBarItem.imageInsets = UIEdgeInsets(top: 1, left: 0, bottom: -1, right: 0)
         
         // Use the following code to wrap in navigation controller for navbar title etc.
         let meditationController = UINavigationController(rootViewController: MeditationViewController())
 //        let meditationController =  MeditationViewController()
         meditationController.tabBarItem.title = "Meditations"
         meditationController.tabBarItem.image = #imageLiteral(resourceName: "meditation")
-        meditationController.tabBarItem.imageInsets = UIEdgeInsets(top: 8, left: 0, bottom: -8, right: 0)
+        meditationController.tabBarItem.imageInsets = UIEdgeInsets(top: 1, left: 0, bottom: -1, right: 0)
         
         
         // Using storyboard for goal controller
@@ -53,16 +54,16 @@ class MainTabBarController: UITabBarController {
 //        self.navigationController?.pushViewController(controller, animated: true)
         
         let goalSetterController = UINavigationController(rootViewController: controller)
-        goalSetterController.tabBarItem.title = "Goal Setter"
+        goalSetterController.tabBarItem.title = "Goals"
         goalSetterController.tabBarItem.image = #imageLiteral(resourceName: "goalSetter")
-        goalSetterController.tabBarItem.imageInsets = UIEdgeInsets(top: 8, left: 0, bottom: -8, right: 0)
+        goalSetterController.tabBarItem.imageInsets = UIEdgeInsets(top: 1, left: 0, bottom: -1, right: 0)
         
         let shopController = UINavigationController(rootViewController: ShopViewController())
         shopController.tabBarItem.title = "Shop"
         shopController.tabBarItem.image = #imageLiteral(resourceName: "shop")
-        shopController.tabBarItem.imageInsets = UIEdgeInsets(top: 8, left: 0, bottom: -8, right: 0)
+        shopController.tabBarItem.imageInsets = UIEdgeInsets(top: 1, left: 0, bottom: -1, right: 0)
         
-        UITabBarItem.appearance().titlePositionAdjustment = UIOffset(horizontal: 0, vertical: 10)
+        UITabBarItem.appearance().titlePositionAdjustment = UIOffset(horizontal: 0, vertical: 1)
         
         viewControllers = [
             blogController,
@@ -82,14 +83,15 @@ class MainTabBarController: UITabBarController {
         self.tabBar.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        let index = -(tabBar.items?.firstIndex(of: tabBar.selectedItem!)?.distance(to: 0))!
-        let frame = frameForTabAtIndex(index: index)
-        circle?.center.x = frame.origin.x + frame.width/2
-        circle?.center.y = (frame.origin.y)-2 + frame.height
-        circle?.alpha = 1
-    }
+        // tabBarItem Circle Effect
+//    override func viewDidAppear(_ animated: Bool) {
+//        super.viewDidAppear(animated)
+//        let index = -(tabBar.items?.firstIndex(of: tabBar.selectedItem!)?.distance(to: 0))!
+//        let frame = frameForTabAtIndex(index: index)
+//        circle?.center.x = frame.origin.x + frame.width/2
+//        circle?.center.y = (frame.origin.y)-2 + frame.height
+//        circle?.alpha = 1
+//    }
     
     func frameForTabAtIndex(index: Int) -> CGRect {
         var frames = tabBar.subviews.compactMap { (view:UIView) -> CGRect? in
@@ -174,12 +176,14 @@ extension MainTabBarController: UITabBarControllerDelegate {
     
     override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
         
-//        let index = self.tabBar.items?.firstIndex(of: item)
-//        let subView = tabBar.subviews[index!+1].subviews.first as! UIImageView
-//        self.performSpringAnimation(imgView: subView)
-        let index1 = -(tabBar.items?.firstIndex(of: item)?.distance(to: 0))!
-        let frame = frameForTabAtIndex(index: index1)
-        self.circle?.center.x = frame.origin.x + frame.width/2
+        let index = self.tabBar.items?.firstIndex(of: item)
+        let subView = tabBar.subviews[index!+1].subviews.first as! UIImageView
+        self.performSpringAnimation(imgView: subView)
+        
+        // TabBarItems Circle Effect
+//        let index1 = -(tabBar.items?.firstIndex(of: item)?.distance(to: 0))!
+//        let frame = frameForTabAtIndex(index: index1)
+//        self.circle?.center.x = frame.origin.x + frame.width/2
     }
     
     func performSpringAnimation(imgView: UIImageView) {

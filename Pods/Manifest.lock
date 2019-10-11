@@ -2,23 +2,27 @@ PODS:
   - Alamofire (4.9.0)
   - FeedKit (6.2.0)
   - Kingfisher (5.7.1)
+  - UPCarouselFlowLayout (1.1.2)
 
 DEPENDENCIES:
   - Alamofire (~> 4.5)
   - FeedKit (~> 6.0)
   - Kingfisher (~> 5.0)
+  - UPCarouselFlowLayout
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - FeedKit
     - Kingfisher
+    - UPCarouselFlowLayout
 
 SPEC CHECKSUMS:
   Alamofire: afc3e7c6db61476cb45cdd23fed06bad03bbc321
   FeedKit: 48e371d0884b3bc7d87253f5ae3313c91d2a7e72
   Kingfisher: 176d377ad339113c99ad4980cbae687f807e20fe
+  UPCarouselFlowLayout: 4c7d2c43a10ebb1597bde502a53699d378341dad
 
-PODFILE CHECKSUM: 4e45dfe9b6c57228c4f508861194c77ae14e8f2b
+PODFILE CHECKSUM: 8912290e1725a1e00f371f8e77ab199b83e31966
 
 COCOAPODS: 1.6.2
