@@ -19,30 +19,32 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         window = UIWindow()
+        
+        let storyboard = UIStoryboard(name: "Onboarding", bundle: nil)
+        var vc: UIViewController
+        
+        if (UserDefaults.standard.value(forKey: "name") as? String) == nil {
+            //show onboarding screen
+            vc = storyboard.instantiateViewController(withIdentifier: "Onboarding1")
+        } else {
+            //show main screen
+            vc = MainTabBarController()
+        }
+        
+        window?.rootViewController = vc
         window?.makeKeyAndVisible()
-        window?.rootViewController = MainTabBarController()
+
         
         let tabBar = UITabBar.appearance()
         tabBar.barTintColor = UIColor.clear
         tabBar.backgroundImage = UIImage()
         tabBar.shadowImage = UIImage()
-        
-        UITabBar.appearance().tintColor = UIColor(red: 37.0 / 255.0, green: 163.0 / 255.0, blue: 181.0 / 255.0, alpha: 1.0)
+        tabBar.tintColor = UIColor(red: 37.0 / 255.0, green: 163.0 / 255.0, blue: 181.0 / 255.0, alpha: 1.0)
         
         let navBar = UINavigationBar.appearance()
-//        navBar.barTintColor = .blue
-        
-//        navBar.setBackgroundImage(UIImage(), for: .default)
-//        // Sets shadow (line below the bar) to a blank image
-//        navBar.shadowImage = UIImage()
-//        // Sets the translucent background color
-//        navBar.backgroundColor = .clear
-//        // Set translucent. (Default value is already true, so this can be removed if desired.)
         navBar.tintColor = .white
         navBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white]
 
-//
-//        navBar.isTranslucent = true
         
         return true
     }

@@ -36,6 +36,7 @@
 		BD56795B233321B6000D0C02 /* Podcast.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD56795A233321B6000D0C02 /* Podcast.swift */; };
 		BD56795D2333D80C000D0C02 /* BlogDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD56795C2333D80C000D0C02 /* BlogDetailView.xib */; };
 		BD56795F23341B25000D0C02 /* BlogDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD56795E23341B25000D0C02 /* BlogDetailView.swift */; };
+		BD5C7B1D2356A17B00FD1001 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD5C7B1C2356A17B00FD1001 /* Onboarding.storyboard */; };
 		BD5DA4F8234FD63800E72B05 /* goalTipsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5DA4F6234FD63800E72B05 /* goalTipsCollectionViewCell.swift */; };
 		BD5DA4F9234FD63800E72B05 /* goalTipsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD5DA4F7234FD63800E72B05 /* goalTipsCollectionViewCell.xib */; };
 		BD7AB5142346A6E300DDB62B /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7AB5132346A6E300DDB62B /* NavigationBar.swift */; };
@@ -89,6 +90,7 @@
 		BD56795A233321B6000D0C02 /* Podcast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Podcast.swift; sourceTree = "<group>"; };
 		BD56795C2333D80C000D0C02 /* BlogDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = BlogDetailView.xib; path = EOS/Views/BlogDetailView.xib; sourceTree = SOURCE_ROOT; };
 		BD56795E23341B25000D0C02 /* BlogDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogDetailView.swift; sourceTree = "<group>"; };
+		BD5C7B1C2356A17B00FD1001 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		BD5DA4F6234FD63800E72B05 /* goalTipsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = goalTipsCollectionViewCell.swift; sourceTree = "<group>"; };
 		BD5DA4F7234FD63800E72B05 /* goalTipsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = goalTipsCollectionViewCell.xib; sourceTree = "<group>"; };
 		BD7AB5132346A6E300DDB62B /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
@@ -204,6 +206,7 @@
 				BDBEC0AF2343DD6500FB1DAF /* GoalDetailView.xib */,
 				BDBEC0B12343DD7700FB1DAF /* GoalDetailView.swift */,
 				BDF3B7672345755400F6906E /* GoalsSB.storyboard */,
+				BD5C7B1C2356A17B00FD1001 /* Onboarding.storyboard */,
 				BD5DA4F6234FD63800E72B05 /* goalTipsCollectionViewCell.swift */,
 				BD5DA4F7234FD63800E72B05 /* goalTipsCollectionViewCell.xib */,
 			);
@@ -322,6 +325,7 @@
 				BD0F8DC1232098B600ACCAC0 /* LaunchScreen.storyboard in Resources */,
 				BDF3B7682345755400F6906E /* GoalsSB.storyboard in Resources */,
 				BDC049C723357EE900E76E4A /* EpisodeTableViewCell.xib in Resources */,
+				BD5C7B1D2356A17B00FD1001 /* Onboarding.storyboard in Resources */,
 				BD56792F2328B19B000D0C02 /* MeditationCell.xib in Resources */,
 				BD0F8DBE232098B600ACCAC0 /* Assets.xcassets in Resources */,
 				BDBEC0AC2343D03700FB1DAF /* GoalCell.xib in Resources */,

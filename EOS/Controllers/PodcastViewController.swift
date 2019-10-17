@@ -20,7 +20,7 @@ class PodcastViewController: UITableViewController {
         }
     }
     
-    var term = "brian voong"
+    var term = "meateater"
     
     override func viewDidLoad() {
         super.viewDidLoad()
