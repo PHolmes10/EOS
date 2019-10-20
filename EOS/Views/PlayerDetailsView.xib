@@ -122,6 +122,7 @@
                             <constraints>
                                 <constraint firstAttribute="height" constant="36" id="SXv-nE-L0n"/>
                             </constraints>
+                            <color key="maximumTrackTintColor" red="0.56075114010000005" green="0.55643361810000003" blue="0.58121949429999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="handleCurrentTimeSliderChange:" destination="BKl-9u-vzN" eventType="valueChanged" id="pGH-tg-zZJ"/>
                             </connections>
@@ -243,6 +244,7 @@
                                 <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Dh1-BG-eaI">
                                     <rect key="frame" x="32" y="0.0" width="263" height="35"/>
                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="maximumTrackTintColor" red="0.56075114011764526" green="0.55643361806869507" blue="0.58121949434280396" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <connections>
                                         <action selector="handleVolumeChange:" destination="BKl-9u-vzN" eventType="valueChanged" id="ZoJ-Jp-1cb"/>
                                     </connections>
