@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Welcome View Controller-->
         <scene sceneID="80d-uR-bcY">
             <objects>
-                <viewController storyboardIdentifier="Onboarding3" id="Kbs-9V-dha" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Onboarding3" id="Kbs-9V-dha" customClass="WelcomeViewController" customModule="EOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qKZ-ol-gA5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -25,7 +25,7 @@
                                 <color key="backgroundColor" red="0.077986199238578635" green="0.077986199238578635" blue="0.077986199238578635" alpha="0.38637093321917809" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="PM5-7I-Roc">
-                                <rect key="frame" x="86" y="194" width="242" height="297"/>
+                                <rect key="frame" x="86" y="238" width="242" height="297"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoImage" translatesAutoresizingMaskIntoConstraints="NO" id="aUo-Fm-Xdf">
                                         <rect key="frame" x="76" y="0.0" width="90" height="90"/>
@@ -106,6 +106,9 @@
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                                     </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="toMTBC:" destination="Kbs-9V-dha" eventType="touchUpInside" id="4ED-af-IXT"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -140,10 +143,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="VrE-Yi-evQ"/>
                     </view>
+                    <navigationItem key="navigationItem" id="x4p-by-SzH"/>
+                    <connections>
+                        <outlet property="nameTextField" destination="D7w-oK-LU8" id="DFg-Kx-DU6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l3R-NB-8OM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2524.6376811594205" y="-81.026785714285708"/>
+            <point key="canvasLocation" x="3434.7826086956525" y="-81.026785714285708"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="N0Z-82-aTU">
@@ -160,7 +167,7 @@
                                 <rect key="frame" x="47" y="244" width="320" height="310"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ledwell" translatesAutoresizingMaskIntoConstraints="NO" id="Tle-t0-17P">
-                                        <rect key="frame" x="107" y="0.0" width="106" height="130"/>
+                                        <rect key="frame" x="54" y="0.0" width="212" height="130"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Natalie Ledwell" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gqd-pk-4xD">
                                         <rect key="frame" x="78" y="138" width="164" height="28"/>
@@ -316,7 +323,7 @@
                                                         <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                                     </userDefinedRuntimeAttributes>
                                                     <connections>
-                                                        <segue destination="Kbs-9V-dha" kind="presentation" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="2Px-o9-QMd"/>
+                                                        <segue destination="tPp-Kp-XtX" kind="presentation" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="2Px-o9-QMd"/>
                                                     </connections>
                                                 </button>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-more-than-50" translatesAutoresizingMaskIntoConstraints="NO" id="di6-rI-lDb">
@@ -368,6 +375,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7wj-cW-nOn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1646.376811594203" y="-81.026785714285708"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="RCU-UD-Jrg">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tPp-Kp-XtX" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5uj-cn-kAE">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Kbs-9V-dha" kind="relationship" relationship="rootViewController" id="eDC-dQ-WkP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NaB-bw-Rot" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2524.6376811594205" y="-81.026785714285708"/>
         </scene>
     </scenes>
     <resources>

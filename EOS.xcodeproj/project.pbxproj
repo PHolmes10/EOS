@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		57F7699AB70B3604A1200A78 /* Pods_EOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BABAC5695991F0A1A371C94 /* Pods_EOS.framework */; };
+		BD0669F4235D08EF006F35B9 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0669F3235D08EF006F35B9 /* WelcomeViewController.swift */; };
 		BD0F8DB7232098B500ACCAC0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0F8DB6232098B500ACCAC0 /* AppDelegate.swift */; };
 		BD0F8DB9232098B500ACCAC0 /* BlogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0F8DB8232098B500ACCAC0 /* BlogViewController.swift */; };
 		BD0F8DBE232098B600ACCAC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD0F8DBD232098B600ACCAC0 /* Assets.xcassets */; };
@@ -60,6 +61,7 @@
 /* Begin PBXFileReference section */
 		4BABAC5695991F0A1A371C94 /* Pods_EOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		74EB246808680DDC1C2999BF /* Pods-EOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EOS.release.xcconfig"; path = "Target Support Files/Pods-EOS/Pods-EOS.release.xcconfig"; sourceTree = "<group>"; };
+		BD0669F3235D08EF006F35B9 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		BD0F8DB3232098B500ACCAC0 /* EOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD0F8DB6232098B500ACCAC0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD0F8DB8232098B500ACCAC0 /* BlogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogViewController.swift; sourceTree = "<group>"; };
@@ -216,6 +218,7 @@
 		BD56792D232861E2000D0C02 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				BD0669F3235D08EF006F35B9 /* WelcomeViewController.swift */,
 				BD0F8DC823209AB200ACCAC0 /* MainTabBarController.swift */,
 				BD0F8DB8232098B500ACCAC0 /* BlogViewController.swift */,
 				BD5679172320B9F1000D0C02 /* PodcastViewController.swift */,
@@ -406,6 +409,7 @@
 				BD5679312328B34A000D0C02 /* MeditationCell.swift in Sources */,
 				BD567951233320BC000D0C02 /* RSSFeed.swift in Sources */,
 				BD56794823332054000D0C02 /* API.swift in Sources */,
+				BD0669F4235D08EF006F35B9 /* WelcomeViewController.swift in Sources */,
 				BDBEC0AE2343D0F000FB1DAF /* GoalCell.swift in Sources */,
 				BD0F8DB9232098B500ACCAC0 /* BlogViewController.swift in Sources */,
 				BD56792A23280AF0000D0C02 /* BlogCell.swift in Sources */,
