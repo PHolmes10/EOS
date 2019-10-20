@@ -139,9 +139,13 @@ class MainTabBarController: UITabBarController {
         
         playerDetailsView.playlistEpisodes = playlistEpisodes
         
+        let frame = self.tabBar.frame
+        
         UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
             self.view.layoutIfNeeded()
-            self.tabBar.transform = CGAffineTransform(translationX: 0, y: 100)
+//            self.tabBar.transform = CGAffineTransform(translationX: 0, y: 100)
+            self.tabBar.frame = frame.offsetBy(dx: 0, dy: 100)
+            
             self.playerDetailsView.maximizedStackView.alpha = 1
             self.playerDetailsView.miniPlayerView.alpha = 0
         })

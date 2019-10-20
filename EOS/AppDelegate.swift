@@ -20,19 +20,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow()
         
-        let storyboard = UIStoryboard(name: "Onboarding", bundle: nil)
-        var vc: UIViewController
+//        let storyboard = UIStoryboard(name: "Onboarding", bundle: nil)
+//        var vc: UIViewController
+//        
+//        if (UserDefaults.standard.value(forKey: "name") as? String) == nil {
+//            //show onboarding screen
+//            vc = storyboard.instantiateViewController(withIdentifier: "Onboarding1")
+//        } else {
+//            //show main screen
+//            vc = MainTabBarController()
+//        }
         
-        if (UserDefaults.standard.value(forKey: "name") as? String) == nil {
-            //show onboarding screen
-            vc = storyboard.instantiateViewController(withIdentifier: "Onboarding1")
-        } else {
-            //show main screen
-            vc = MainTabBarController()
-        }
-        
-        window?.rootViewController = vc
         window?.makeKeyAndVisible()
+        window?.rootViewController = MainTabBarController()
+        
 
         
         let tabBar = UITabBar.appearance()

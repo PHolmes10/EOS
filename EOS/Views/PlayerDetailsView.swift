@@ -132,8 +132,8 @@ class PlayerDetailsView: UIView {
       return .success
     }
 
-    commandCenter.nextTrackCommand.addTarget(self, action: #selector(handleNextTrack))
-    commandCenter.previousTrackCommand.addTarget(self, action: #selector(handlePrevTrack))
+//    commandCenter.nextTrackCommand.addTarget(self, action: #selector(handleNextTrack))
+//    commandCenter.previousTrackCommand.addTarget(self, action: #selector(handlePrevTrack))
   }
 
   var playlistEpisodes = [Episode]()
