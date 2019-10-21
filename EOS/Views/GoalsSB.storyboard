@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_0" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZSN-hY-hbA" userLabel="newGoalView">
-                                <rect key="frame" x="20" y="40" width="134.5" height="142"/>
+                                <rect key="frame" x="20" y="20" width="134.5" height="142"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZAs-NS-5Ao" userLabel="newGoalButton">
                                         <rect key="frame" x="0.0" y="0.0" width="134.5" height="142"/>
@@ -39,7 +37,7 @@
                                     <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DcH-wn-9Hc">
                                         <rect key="frame" x="0.0" y="102" width="134.5" height="40"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="RCb-hZ-RpX">
-                                            <rect key="frame" x="0.0" y="0.0" width="135" height="40"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="134.5" height="40"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Goal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Oa-16-fVb">
@@ -78,7 +76,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MG7-vR-thc" userLabel="goalListView">
-                                <rect key="frame" x="165.5" y="40" width="134.5" height="142"/>
+                                <rect key="frame" x="165.5" y="20" width="134.5" height="142"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6r0-5S-3hr" userLabel="goalListButton">
                                         <rect key="frame" x="0.0" y="0.0" width="134.5" height="142"/>
@@ -98,7 +96,7 @@
                                     <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CJp-bD-lqx" userLabel="Goal List Blur">
                                         <rect key="frame" x="0.0" y="102" width="134.5" height="40"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="zfM-9N-x3O">
-                                            <rect key="frame" x="0.0" y="0.0" width="134" height="40"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="134.5" height="40"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Goals" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bNN-KQ-b7k">
@@ -158,7 +156,7 @@
                             <constraint firstItem="MG7-vR-thc" firstAttribute="width" secondItem="CRX-gb-5Ve" secondAttribute="width" multiplier="0.42" id="dDj-Ml-dPW"/>
                             <constraint firstItem="fsH-Lb-EkQ" firstAttribute="trailing" secondItem="5CY-GL-KIf" secondAttribute="trailing" id="g9w-b0-CaZ"/>
                             <constraint firstItem="MG7-vR-thc" firstAttribute="top" secondItem="fsH-Lb-EkQ" secondAttribute="top" constant="20" id="iV8-mh-AJf"/>
-                            <constraint firstItem="5CY-GL-KIf" firstAttribute="top" secondItem="ZSN-hY-hbA" secondAttribute="bottom" id="niY-oV-edb"/>
+                            <constraint firstItem="5CY-GL-KIf" firstAttribute="top" secondItem="ZSN-hY-hbA" secondAttribute="bottom" constant="20" id="niY-oV-edb"/>
                             <constraint firstItem="ZSN-hY-hbA" firstAttribute="width" secondItem="CRX-gb-5Ve" secondAttribute="width" multiplier="0.42" id="pue-Lr-84j"/>
                             <constraint firstItem="ZSN-hY-hbA" firstAttribute="height" secondItem="CRX-gb-5Ve" secondAttribute="height" multiplier="0.25" id="rg9-6Y-xgZ"/>
                             <constraint firstItem="MG7-vR-thc" firstAttribute="height" secondItem="CRX-gb-5Ve" secondAttribute="height" multiplier="0.25" id="tYb-Go-TZU"/>
@@ -200,9 +198,9 @@
                                 </connections>
                             </button>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cff-tt-K3g">
-                                <rect key="frame" x="32" y="70" width="256" height="397.5"/>
+                                <rect key="frame" x="32" y="50" width="256" height="397.5"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="2fS-cN-Zv7">
-                                    <rect key="frame" x="0.0" y="0.0" width="256" height="397"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="256" height="397.5"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="  Goal Title" textAlignment="natural" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="LSr-X0-I4b">
@@ -234,14 +232,11 @@
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                         </textView>
-                                        <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="fqK-Zf-VrU">
+                                        <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="fqK-Zf-VrU">
                                             <rect key="frame" x="8" y="241" width="240" height="100"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="100" id="sdN-eY-qbw"/>
                                             </constraints>
-                                            <date key="date" timeIntervalSinceReferenceDate="591928946.93048096">
-                                                <!--2019-10-05 00:42:26 +0000-->
-                                            </date>
                                         </datePicker>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a deadline for your goal" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="q5V-uC-pwK">
                                             <rect key="frame" x="8" y="203" width="240" height="30"/>
@@ -272,6 +267,7 @@
                                             <connections>
                                                 <action selector="next:" destination="069-Z7-qc7" eventType="touchUpInside" id="L02-i4-azw"/>
                                                 <action selector="saveGoal:" destination="069-Z7-qc7" eventType="touchUpInside" id="thL-mh-8y4"/>
+                                                <segue destination="lNq-6n-tVM" kind="presentation" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="9rM-co-czv"/>
                                             </connections>
                                         </button>
                                     </subviews>

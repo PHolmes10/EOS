@@ -11,13 +11,24 @@ import UIKit
 class goalTipsCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var goalTipsImageView: UIImageView!
+        
     
-    @IBOutlet weak var goalTipsTextView: UITextView!
+    @IBOutlet weak var goalTipsLabel: UILabel!
     
+
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        
+        
     }
 
+//    override var bounds: CGRect {
+//        didSet {
+//          contentView.frame = bounds
+//        }
+//    }
+//    
 }
