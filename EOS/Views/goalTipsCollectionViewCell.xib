@@ -18,13 +18,13 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EQZ-gf-Nwm">
-                        <rect key="frame" x="60" y="0.0" width="313" height="639"/>
+                        <rect key="frame" x="60" y="0.0" width="313" height="589"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Jones" translatesAutoresizingMaskIntoConstraints="NO" id="bpK-sP-XJN" userLabel="Goal Tip Image">
                                 <rect key="frame" x="100.5" y="10" width="112" height="112"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="Lvz-qZ-EGC">
-                                <rect key="frame" x="20" y="127" width="273" height="507"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="Lvz-qZ-EGC">
+                                <rect key="frame" x="20" y="127" width="273" height="457"/>
                                 <string key="text">The difference between a desire and a goal is specificity. For example, being “more fulfilled” by your job is a desire but you still need a specific goal to strive for that will convert that desire into reality.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <nil key="textColor"/>
@@ -54,7 +54,7 @@
                 <constraint firstItem="EQZ-gf-Nwm" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="60" id="JuT-eo-w2r"/>
                 <constraint firstItem="bpK-sP-XJN" firstAttribute="height" secondItem="ZTg-uK-7eu" secondAttribute="height" multiplier="0.2" id="Mdu-5V-sxG"/>
                 <constraint firstItem="EQZ-gf-Nwm" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="a29-tR-VKP"/>
-                <constraint firstAttribute="bottom" secondItem="EQZ-gf-Nwm" secondAttribute="bottom" id="efH-Jo-8ZC"/>
+                <constraint firstAttribute="bottom" secondItem="EQZ-gf-Nwm" secondAttribute="bottom" constant="50" id="efH-Jo-8ZC"/>
                 <constraint firstAttribute="trailing" secondItem="EQZ-gf-Nwm" secondAttribute="trailing" constant="60" id="wYI-ZP-Eph"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>

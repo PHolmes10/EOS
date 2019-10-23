@@ -14,7 +14,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
@@ -34,19 +33,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
         window?.rootViewController = vc
         
-
-        
         let tabBar = UITabBar.appearance()
         tabBar.barTintColor = UIColor.clear
         tabBar.backgroundImage = UIImage()
         tabBar.shadowImage = UIImage()
-        tabBar.tintColor = UIColor(red: 85.0 / 255.0, green: 145.0 / 255.0, blue: 208.0 / 255.0, alpha: 1.0)
+        tabBar.tintColor = UIColor(red: 95.0 / 255.0, green: 124.0 / 255.0, blue: 144.0 / 255.0, alpha: 1.0)
         
         let navBar = UINavigationBar.appearance()
         navBar.tintColor = .white
         navBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white]
 
-        
         return true
     }
 
