@@ -56,7 +56,8 @@ class NewGoalViewController: UIViewController, UITextViewDelegate, UITextFieldDe
             alert.addAction(UIAlertAction(title: "Yes", style: .cancel, handler: {action in
                 
                 self.goalTitleTextField.text = ""
-                self.goalDescriptionTextView.text = ""
+                self.goalDescriptionTextView.text = "Be as specific as possible when describing your goal"
+                self.goalDescriptionTextView.textColor = self.placeholderColor
                 self.datePicker.date = Date()
             }))
             
