@@ -17,7 +17,7 @@ extension Notification.Name {
     static let downloadComplete = NSNotification.Name("downloadComplete")
 }
 
-var podcastTerm:String = "this past weekend"
+var podcastTerm:String = "evolution of success"
 
 class APIService {
 

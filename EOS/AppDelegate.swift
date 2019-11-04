@@ -37,7 +37,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         tabBar.barTintColor = UIColor.clear
         tabBar.backgroundImage = UIImage()
         tabBar.shadowImage = UIImage()
-        tabBar.tintColor = UIColor(red: 95.0 / 255.0, green: 124.0 / 255.0, blue: 144.0 / 255.0, alpha: 1.0)
+        tabBar.tintColor = UIColor(red: 100.0 / 255.0, green: 180.0 / 255.0, blue: 250.0 / 255.0, alpha: 1.0)
         
         let navBar = UINavigationBar.appearance()
         navBar.tintColor = .white
