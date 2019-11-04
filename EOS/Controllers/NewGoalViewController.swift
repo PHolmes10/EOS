@@ -44,7 +44,22 @@ class NewGoalViewController: UIViewController, UITextViewDelegate, UITextFieldDe
         
         do {
             ad.saveContext()
-//            self.dismiss(animated: true, completion: nil)
+            
+            let alert = UIAlertController(title: "Congratulations! Would you like to add another goal?", message: nil, preferredStyle: .alert)
+            self.present(alert, animated: true)
+                
+            
+                alert.addAction(UIAlertAction(title: "No", style: .default, handler: {action in
+                    
+                    self.dismiss(animated: true, completion: nil)
+                }))
+            alert.addAction(UIAlertAction(title: "Yes", style: .cancel, handler: {action in
+                
+                self.goalTitleTextField.text = ""
+                self.goalDescriptionTextView.text = ""
+                self.datePicker.date = Date()
+            }))
+            
         } catch {
             print("cannot save")
         }

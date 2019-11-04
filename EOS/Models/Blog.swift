@@ -15,7 +15,7 @@ struct Blog {
     
     static func fetchBlogs() -> [Blog] {
 
-        let b1 = Blog(title: "Taking the Risk Taking the Risk Taking the Risk Taking the Risk", author: "Daniel Holmes", blogImage: "Book")
+        let b1 = Blog(title: "", author: "Daniel Holmes", blogImage: "meditations")
         let b2 = Blog(title: "Other Blog", author: "Patrick Holmes", blogImage: "City")
         let b3 = Blog(title: "Third Blog", author: "Matthew Toman", blogImage: "Landscape")
         let b4 = Blog(title: "Fourth Blog", author: "Fourth Author",blogImage: "Light")

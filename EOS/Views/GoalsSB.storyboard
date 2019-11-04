@@ -267,7 +267,6 @@
                                             <connections>
                                                 <action selector="next:" destination="069-Z7-qc7" eventType="touchUpInside" id="L02-i4-azw"/>
                                                 <action selector="saveGoal:" destination="069-Z7-qc7" eventType="touchUpInside" id="thL-mh-8y4"/>
-                                                <segue destination="lNq-6n-tVM" kind="presentation" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="9rM-co-czv"/>
                                             </connections>
                                         </button>
                                     </subviews>
@@ -324,99 +323,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rIn-NK-8f2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1273.125" y="-152.11267605633802"/>
-        </scene>
-        <!--Well Done View Controller-->
-        <scene sceneID="UxE-Lm-hcP">
-            <objects>
-                <viewController id="lNq-6n-tVM" customClass="WellDoneViewController" customModule="EOS" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Oo5-VO-GE8">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="haT-ld-AmE">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <connections>
-                                    <action selector="dismissOutside:" destination="lNq-6n-tVM" eventType="touchUpInside" id="Tfw-Vi-cO4"/>
-                                </connections>
-                            </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ltY-sO-v9X">
-                                <rect key="frame" x="35" y="84" width="250" height="400"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rfY-zK-bA7">
-                                        <rect key="frame" x="15" y="345" width="80" height="40"/>
-                                        <color key="backgroundColor" red="0.57045853140000002" green="0.57047235969999999" blue="0.57046490910000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="80" id="Pbz-6U-LMz"/>
-                                            <constraint firstAttribute="height" constant="40" id="W4D-4j-eHX"/>
-                                        </constraints>
-                                        <state key="normal" title="New Goal">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="15"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iZs-9u-hKu" userLabel="My Goals">
-                                        <rect key="frame" x="155" y="345" width="80" height="40"/>
-                                        <color key="backgroundColor" red="0.57045853140000002" green="0.57047235969999999" blue="0.57046490910000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="BRM-XQ-Te7"/>
-                                            <constraint firstAttribute="width" constant="80" id="euC-zv-F1l"/>
-                                        </constraints>
-                                        <state key="normal" title="My Goals">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="15"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" red="0.82236570119857788" green="0.70612424612045288" blue="0.66330069303512573" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="400" id="7Oc-8j-qcl"/>
-                                    <constraint firstAttribute="bottom" secondItem="iZs-9u-hKu" secondAttribute="bottom" constant="15" id="BWa-FA-e0F"/>
-                                    <constraint firstAttribute="bottom" secondItem="rfY-zK-bA7" secondAttribute="bottom" constant="15" id="L0k-Gq-7h3"/>
-                                    <constraint firstAttribute="trailing" secondItem="iZs-9u-hKu" secondAttribute="trailing" constant="15" id="Nis-hI-p97"/>
-                                    <constraint firstAttribute="width" constant="250" id="ivJ-Na-Clo"/>
-                                    <constraint firstItem="rfY-zK-bA7" firstAttribute="leading" secondItem="ltY-sO-v9X" secondAttribute="leading" constant="15" id="rBY-f5-uZb"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="15"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Well Done!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IdM-Sv-9Ow">
-                                <rect key="frame" x="65.5" y="261.5" width="189" height="45"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="38"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="haT-ld-AmE" firstAttribute="bottom" secondItem="V33-qJ-UYC" secondAttribute="bottom" id="7fP-3r-ege"/>
-                            <constraint firstItem="IdM-Sv-9Ow" firstAttribute="centerY" secondItem="Oo5-VO-GE8" secondAttribute="centerY" id="Itd-bT-wGW"/>
-                            <constraint firstItem="ltY-sO-v9X" firstAttribute="centerY" secondItem="Oo5-VO-GE8" secondAttribute="centerY" id="Nso-Tv-ybX"/>
-                            <constraint firstItem="IdM-Sv-9Ow" firstAttribute="centerX" secondItem="Oo5-VO-GE8" secondAttribute="centerX" id="OAU-Pd-UA3"/>
-                            <constraint firstItem="haT-ld-AmE" firstAttribute="leading" secondItem="V33-qJ-UYC" secondAttribute="leading" id="ScI-uj-2pR"/>
-                            <constraint firstItem="haT-ld-AmE" firstAttribute="trailing" secondItem="V33-qJ-UYC" secondAttribute="trailing" id="Uye-A5-8E5"/>
-                            <constraint firstItem="haT-ld-AmE" firstAttribute="top" secondItem="Oo5-VO-GE8" secondAttribute="top" id="WQD-FD-ECW"/>
-                            <constraint firstItem="ltY-sO-v9X" firstAttribute="centerX" secondItem="Oo5-VO-GE8" secondAttribute="centerX" id="tAm-xT-znR"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="V33-qJ-UYC"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gev-JE-uug" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2126.25" y="-150"/>
         </scene>
     </scenes>
     <resources>

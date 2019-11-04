@@ -56,14 +56,10 @@ class GoalsSBViewController: UIViewController, UICollectionViewDelegate, UIColle
         return 5
     }
     
-    
-    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
     {
         return CGSize(width: view.frame.width + 30, height: view.frame.height/2.3)
     }
-    
-    
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = goalTipsCollectionView.dequeueReusableCell(withReuseIdentifier: "goalTipsIdentifier", for: indexPath) as! goalTipsCollectionViewCell

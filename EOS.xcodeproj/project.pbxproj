@@ -55,7 +55,6 @@
 		BDF3B7682345755400F6906E /* GoalsSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDF3B7672345755400F6906E /* GoalsSB.storyboard */; };
 		BDF3B76A2345757A00F6906E /* GoalsSBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF3B7692345757A00F6906E /* GoalsSBViewController.swift */; };
 		BDFCBBAD234685E500447250 /* NewGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFCBBAC234685E500447250 /* NewGoalViewController.swift */; };
-		BDFCBBAF2346934400447250 /* WellDoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFCBBAE2346934400447250 /* WellDoneViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -110,7 +109,6 @@
 		BDF3B7672345755400F6906E /* GoalsSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GoalsSB.storyboard; sourceTree = "<group>"; };
 		BDF3B7692345757A00F6906E /* GoalsSBViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsSBViewController.swift; sourceTree = "<group>"; };
 		BDFCBBAC234685E500447250 /* NewGoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewGoalViewController.swift; sourceTree = "<group>"; };
-		BDFCBBAE2346934400447250 /* WellDoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WellDoneViewController.swift; sourceTree = "<group>"; };
 		BE8DE4D0DC539F5171EB998C /* Pods-EOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EOS.debug.xcconfig"; path = "Target Support Files/Pods-EOS/Pods-EOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -225,7 +223,6 @@
 				BDF3B7692345757A00F6906E /* GoalsSBViewController.swift */,
 				BDFCBBAC234685E500447250 /* NewGoalViewController.swift */,
 				BDBEC0A923429E1200FB1DAF /* GoalsTableViewController.swift */,
-				BDFCBBAE2346934400447250 /* WellDoneViewController.swift */,
 				BD5679192320BB6E000D0C02 /* MeditationViewController.swift */,
 				BD56791D23217463000D0C02 /* ShopViewController.swift */,
 				BD56791B2320BDF5000D0C02 /* GoalSetterViewController.swift */,
@@ -420,7 +417,6 @@
 				BDC049CA23357EE900E76E4A /* PlayerDetailsView.swift in Sources */,
 				BD7AB5142346A6E300DDB62B /* NavigationBar.swift in Sources */,
 				BD567956233320BC000D0C02 /* ReuseIdentifier.swift in Sources */,
-				BDFCBBAF2346934400447250 /* WellDoneViewController.swift in Sources */,
 				BD56795B233321B6000D0C02 /* Podcast.swift in Sources */,
 				BDF3B76A2345757A00F6906E /* GoalsSBViewController.swift in Sources */,
 				BDBEC0B22343DD7700FB1DAF /* GoalDetailView.swift in Sources */,
