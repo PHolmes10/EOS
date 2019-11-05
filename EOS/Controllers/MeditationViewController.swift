@@ -20,13 +20,13 @@ class MeditationViewController: UITableViewController {
     var podcast: Podcast?
     {
         didSet {
-            print("didSet")
             fetchEpisodes()
         }
     }
     
     let cellId = "cellId"
-    var term = "this past weekend"
+    
+    var term = "evolution of success"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -84,7 +84,6 @@ class MeditationViewController: UITableViewController {
 //    // MARK:- UITableViewDelegate
 //    
 //    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        print(indexPath.row)
 //        tableView.deselectRow(at: indexPath, animated: true)
 //        let meditationPlayerViewController = MeditationPlayerViewController()
 //        self.navigationController?.pushViewController(meditationPlayerViewController, animated: true)
@@ -97,10 +96,8 @@ class MeditationViewController: UITableViewController {
         tableView.reloadData()
         APIService.shared.fetchPodcasts(term: term) { podcasts in
             self.podcasts = podcasts
-            print(podcasts)
             self.findEpisodes()
             self.tableView.reloadData()
-            print("findPodcastDone")
         }
         
     }
@@ -109,18 +106,15 @@ class MeditationViewController: UITableViewController {
         let episodesViewController = self
         episodesViewController.podcast = podcasts[0]
         //        navigationController?.pushViewController(episodesViewController, animated: true)
-        print("findEpisodes")
     }
     
     fileprivate func fetchEpisodes() {
         guard let feedUrl = podcast?.feedUrl else { return }
-        print("fetchEpisodes1")
         APIService.shared.fetchEpisodes(feedUrl: feedUrl) { [weak self] (episodes) in
             guard let `self` = self else { return }
             self.episodes = episodes
             DispatchQueue.main.async {
                 self.tableView.reloadData()
-                print("fetchEpisodesMainThread")
             }
         }
     }
@@ -151,7 +145,6 @@ class MeditationViewController: UITableViewController {
         tableView.deselectRow(at: indexPath, animated: true)
         let mainTabBarController = UIApplication.shared.keyWindow?.rootViewController as? MainTabBarController
         mainTabBarController?.maximizePlayerDetails(episode: episode, playlistEpisodes: self.episodes)
-        print("this is episode", episode.title)
     }
     
     

@@ -38,7 +38,7 @@ class ShopViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
 //        let myRequest = URLRequest(url: myURL!)
 //        webView.load(myRequest)
         
-        guard let url = URL(string: "https://www.theevolutionofsuccess.com/blueprint-video-series-v1") else { return }
+        guard let url = URL(string: "https://www.theevolutionofsuccess.com") else { return }
         webView = WKWebView(frame: self.view.frame)
         webView.translatesAutoresizingMaskIntoConstraints = false
         webView.isUserInteractionEnabled = true

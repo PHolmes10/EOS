@@ -42,7 +42,6 @@ class NewGoalViewController: UIViewController, UITextViewDelegate, UITextFieldDe
         new?.goalDescription = goalDescriptionTextView.text
         new?.goalDeadline = formattedDate
         
-        do {
             ad.saveContext()
             
             let alert = UIAlertController(title: "Congratulations! Would you like to add another goal?", message: nil, preferredStyle: .alert)
@@ -60,10 +59,6 @@ class NewGoalViewController: UIViewController, UITextViewDelegate, UITextFieldDe
                 self.goalDescriptionTextView.textColor = self.placeholderColor
                 self.datePicker.date = Date()
             }))
-            
-        } catch {
-            print("cannot save")
-        }
         
     }
     

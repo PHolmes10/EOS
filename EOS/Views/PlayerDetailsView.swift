@@ -23,18 +23,41 @@ class PlayerDetailsView: UIView {
 
       playEpisode()
 
-      guard let url = URL(string: episode.imageUrl ?? "") else { return }
-      episodeImageView.kf.setImage(with: url)
 
-      miniEpisodeImageView.kf.setImage(with: url, placeholder: nil, options: nil, progressBlock: nil) { (image, _, _, _) in
-        let image = self.episodeImageView.image ?? UIImage()
-        let artworkItem = MPMediaItemArtwork(boundsSize: .zero, requestHandler: { (size) -> UIImage in
-          return image
-        })
-        MPNowPlayingInfoCenter.default().nowPlayingInfo?[MPMediaItemPropertyArtwork] = artworkItem
-      }
-    }
-  }
+            guard let url = URL(string: episode.imageUrl ?? "") else { return }
+            episodeImageView.kf.setImage(with: url)
+            
+            miniEpisodeImageView.kf.setImage(with: url, placeholder: nil, options: nil, progressBlock: nil) { (image, _, _, _) in
+              let image = self.episodeImageView.image ?? UIImage()
+              let artworkItem = MPMediaItemArtwork(boundsSize: .zero, requestHandler: { (size) -> UIImage in
+                return image
+              })
+              MPNowPlayingInfoCenter.default().nowPlayingInfo?[MPMediaItemPropertyArtwork] = artworkItem
+            }
+          }
+        }
+//      guard let url = URL(string: episode.imageUrl ?? "") else { return }
+//      episodeImageView.kf.setImage(with: url)
+//
+//        miniEpisodeImageView.kf.setImage(with: url)
+//
+//        { result in
+//            switch result {
+//
+//            case .success (var value):
+//
+//                let image = self.episodeImageView.image ?? UIImage()
+//                var artworkItem = MPMediaItemArtwork(boundsSize: .zero, requestHandler: { (size) -> UIImage in
+//            return value.image
+//
+//        })
+//                case .failure (let error):
+//                print("Error: \(error)")
+//            }
+////            MPNowPlayingInfoCenter.default().nowPlayingInfo?[MPMediaItemPropertyArtwork] = artworkItem
+//        }
+//      }
+//  }
 
   fileprivate func setupNowPlayingInfo() {
     var nowPlayingInfo = [String: Any]()
