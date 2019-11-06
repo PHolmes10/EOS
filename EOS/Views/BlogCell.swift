@@ -24,7 +24,7 @@ class BlogCell: UITableViewCell {
     
     func updateUI() {
         blogCellImageView.image = UIImage(named: blog.blogImage)
-        blogTitleLabel.text = blog.title
-        blogAuthorLabel.text = blog.author
+//        blogTitleLabel.text = blog.title
+//        blogAuthorLabel.text = blog.author
     }
 }
