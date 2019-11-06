@@ -2,8 +2,8 @@
 //  PlayerDetailsView.swift
 //  Podcast
 //
-//  Created by Nicolas Desormiere on 9/5/18.
-//  Copyright © 2018 Nicolas Desormiere. All rights reserved.
+//  Created by Patrick Holmes on 9/5/18.
+//  Copyright © 2018 Patrick Holmes. All rights reserved.
 //
 
 import UIKit

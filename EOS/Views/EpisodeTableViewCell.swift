@@ -2,8 +2,8 @@
 //  EpisodeTableViewCell.swift
 //  Podcast
 //
-//  Created by Nicolas Desormiere on 2/5/18.
-//  Copyright © 2018 Nicolas Desormiere. All rights reserved.
+//  Created by Patrick Holmes on 2/5/18.
+//  Copyright © 2018 Patrick Holmes. All rights reserved.
 //
 
 import UIKit
@@ -13,12 +13,12 @@ class EpisodeTableViewCell: UITableViewCell {
 
   var episode: Episode! {
     didSet {
-      titleLabel.text = episode.title
-      descriptionLabel.text = episode.description
-      
-      let dateFormatter = DateFormatter()
-      dateFormatter.dateStyle = .medium
-      pubDateLabel.text = dateFormatter.string(from: episode.pubDate)
+//      titleLabel.text = episode.title
+//      descriptionLabel.text = episode.description
+//      
+//      let dateFormatter = DateFormatter()
+//      dateFormatter.dateStyle = .medium
+//      pubDateLabel.text = dateFormatter.string(from: episode.pubDate)
       
       let secureImageUrl = URL(string: episode.imageUrl ?? "")
       episodeImageView.kf.setImage(with: secureImageUrl)
