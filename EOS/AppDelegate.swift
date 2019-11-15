@@ -18,20 +18,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         window = UIWindow()
-        
-        let storyboard = UIStoryboard(name: "Onboarding", bundle: nil)
-        var vc: UIViewController
-        
-        if (UserDefaults.standard.value(forKey: "name") as? String) == nil {
-            //show onboarding screen
-            vc = storyboard.instantiateViewController(withIdentifier: "Onboarding1")
-        } else {
-            //show main screen
-            vc = MainTabBarController()
-        }
-        
         window?.makeKeyAndVisible()
-        window?.rootViewController = vc
+        
+        
+//        let storyboard = UIStoryboard(name: "Onboarding", bundle: nil)
+//        var vc: UIViewController
+//
+//        if (UserDefaults.standard.value(forKey: "name") as? String) == nil {
+//            //show onboarding screen
+//            vc = storyboard.instantiateViewController(withIdentifier: "Onboarding1")
+//        } else {
+//            //show main screen
+//            vc = MainTabBarController()
+//        }
+        
+        window?.rootViewController = MainTabBarController()
+        
         
         let tabBar = UITabBar.appearance()
         tabBar.barTintColor = UIColor.clear
@@ -42,7 +44,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let navBar = UINavigationBar.appearance()
         navBar.tintColor = .white
         navBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white]
-
+        
         return true
     }
 
@@ -58,10 +60,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillEnterForeground(_ application: UIApplication) {
         // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
+
+        UIApplication.mainTabBarController()?.minimizePlayerDetails()
+        
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        
+        
+        
     }
 
     func applicationWillTerminate(_ application: UIApplication) {

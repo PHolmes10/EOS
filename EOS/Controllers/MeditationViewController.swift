@@ -53,6 +53,18 @@ class MeditationViewController: UITableViewController {
         findPodcast()
         setupTableView()
         
+        
+        let menuButton = UIButton(type: .system)
+        menuButton.setImage(UIImage(named: "menu2"), for: .normal)
+        menuButton.tintColor = .black
+        menuButton.sizeToFit()
+        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: menuButton)
+        
+        menuButton.addTarget(self, action: #selector(menuTapped), for: .touchUpInside)
+    }
+    
+    @objc func menuTapped () {
+        print("menu tapped")
     }
     
 //    fileprivate func setUpTableView() {

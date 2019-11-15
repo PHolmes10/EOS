@@ -12,6 +12,7 @@ class MainTabBarController: UITabBarController {
     
     let layerGradient = CAGradientLayer()
 //    var circle: UIView?
+//    var wasOpened = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,7 +60,7 @@ class MainTabBarController: UITabBarController {
         goalSetterController.tabBarItem.imageInsets = UIEdgeInsets(top: 1, left: 0, bottom: -1, right: 0)
         
         let shopController = UINavigationController(rootViewController: ShopViewController())
-        shopController.tabBarItem.title = "Shop"
+        shopController.tabBarItem.title = "More"
         shopController.tabBarItem.image = #imageLiteral(resourceName: "shop")
         shopController.tabBarItem.imageInsets = UIEdgeInsets(top: 1, left: 0, bottom: -1, right: 0)
         
@@ -183,6 +184,13 @@ extension MainTabBarController: UITabBarControllerDelegate {
         let index = self.tabBar.items?.firstIndex(of: item)
         let subView = tabBar.subviews[index!+1].subviews.first as! UIImageView
         self.performSpringAnimation(imgView: subView)
+        
+        
+        
+//        if (index == 1 || index == 3) {
+//            wasOpened = true
+//        }
+        
         
         // TabBarItems Circle Effect
 //        let index1 = -(tabBar.items?.firstIndex(of: item)?.distance(to: 0))!

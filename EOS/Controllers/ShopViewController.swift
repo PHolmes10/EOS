@@ -29,11 +29,30 @@ class ShopViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
         self.view.backgroundColor = UIColor(red: 155.0 / 255.0, green: 189.0 / 255.0, blue: 208.0 / 255.0, alpha: 1.0)
         
         navigationController?.navigationBar.installBlurEffect()
-        self.title = "Shop"
+        self.title = "More"
         let navBarHeight: CGFloat = self.navigationController?.navigationBar.frame.height ?? 0.0
         
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.black]
         
+//        let burgerBtn: UIButton = UIButton(type: UIButton.ButtonType.custom)
+//
+//        burgerBtn.setImage(UIImage(named: "burger.png"), for: UIControl.State.normal)
+//
+//        burgerBtn.addTarget(self, action: burgerTapped(), forControlEvents: UIControl.Event.TouchUpInside)
+        
+        let menuButton = UIButton(type: .system)
+        menuButton.setImage(UIImage(named: "menu2"), for: .normal)
+        menuButton.tintColor = .black
+        menuButton.sizeToFit()
+        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: menuButton)
+        
+        menuButton.addTarget(self, action: #selector(menuTapped), for: .touchUpInside)
+
+        
+//        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "menu", style: .plain, target: self, action: #selector(burgerTapped))
+        
+        
+
 //        let myURL = URL(string:"https://www.theevolutionofsuccess.com/blueprint-video-series-v1")
 //        let myRequest = URLRequest(url: myURL!)
 //        webView.load(myRequest)
@@ -61,6 +80,10 @@ class ShopViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
         self.webView.navigationDelegate = self
         self.activityIndicator.hidesWhenStopped = true
         
+    }
+    
+    @objc func menuTapped () {
+        print("menu tapped")
     }
 
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {

@@ -12,7 +12,7 @@ import AVKit
 import MediaPlayer
 
 class PlayerDetailsView: UIView {
-
+    
   var episode: Episode! {
     didSet {
       titleLabel.text = episode.title
@@ -20,10 +20,12 @@ class PlayerDetailsView: UIView {
       authorLabel.text = episode.author
 
       setupNowPlayingInfo()
-
+        
       playEpisode()
-
-
+        
+        playPauseButton.setImage(#imageLiteral(resourceName: "pause"), for: .normal)
+        miniPlayPauseButton.setImage(#imageLiteral(resourceName: "pause"), for: .normal)
+        
             guard let url = URL(string: episode.imageUrl ?? "") else { return }
             episodeImageView.kf.setImage(with: url)
             

@@ -10,6 +10,8 @@ import UIKit
 
 class PodcastViewController: UITableViewController {
     
+    var wasOpened = false
+    
     var podcasts: [Podcast] = []
     var episodes: [Episode] = []
 
@@ -99,6 +101,9 @@ class PodcastViewController: UITableViewController {
         tableView.deselectRow(at: indexPath, animated: true)
         let mainTabBarController = UIApplication.shared.keyWindow?.rootViewController as? MainTabBarController
         mainTabBarController?.maximizePlayerDetails(episode: episode, playlistEpisodes: self.episodes)
+        
+        wasOpened = true
+        
     }
 
 
