@@ -15,7 +15,17 @@ class goalTipsCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var goalTipsLabel: UILabel!
     
-
+    var goalTip: goalTip! {
+            didSet {
+                updateUI()
+            }
+        }
+        
+        func updateUI() {
+            goalTipsImageView.image = UIImage(named: goalTip.authorImage)
+            goalTipsLabel.text = goalTip.tip
+    //        blogAuthorLabel.text = blog.author
+        }
     
     override func awakeFromNib() {
         super.awakeFromNib()

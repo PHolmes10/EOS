@@ -11,6 +11,8 @@ import UPCarouselFlowLayout
 
 class GoalsSBViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
+    var goalTips: [goalTip] = goalTip.fetchGoalTips()
+    
     @IBOutlet weak var newGoalButton: UIButton!
     
     @IBOutlet weak var myGoalsBtn: UIButton!
@@ -53,7 +55,7 @@ class GoalsSBViewController: UIViewController, UICollectionViewDelegate, UIColle
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return goalTips.count
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
@@ -64,7 +66,10 @@ class GoalsSBViewController: UIViewController, UICollectionViewDelegate, UIColle
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = goalTipsCollectionView.dequeueReusableCell(withReuseIdentifier: "goalTipsIdentifier", for: indexPath) as! goalTipsCollectionViewCell
         
-        cell.goalTipsLabel.text = "The difference between a desire and a goal is specificity. For example, being “more fulfilled” by your job is a desire but you still need a specific goal to strive for that will convert that desire into reality."
+        let goalTip = goalTips[indexPath.row]
+        cell.goalTip = goalTip
+        
+//        cell.goalTipsLabel.text = "The difference between a desire and a goal is specificity. For example, being “more fulfilled” by your job is a desire but you still need a specific goal to strive for that will convert that desire into reality."
         
         return cell
     }
