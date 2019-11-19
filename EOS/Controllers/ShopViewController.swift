@@ -41,7 +41,7 @@ class ShopViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
 //        burgerBtn.addTarget(self, action: burgerTapped(), forControlEvents: UIControl.Event.TouchUpInside)
         
         let menuButton = UIButton(type: .system)
-        menuButton.setImage(UIImage(named: "menu2"), for: .normal)
+        menuButton.setTitle("Privacy Policy", for: .normal)
         menuButton.tintColor = .black
         menuButton.sizeToFit()
         navigationItem.rightBarButtonItem = UIBarButtonItem(customView: menuButton)
@@ -84,6 +84,16 @@ class ShopViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
     
     @objc func menuTapped () {
         print("menu tapped")
+        
+        let window = UIApplication.shared.keyWindow
+        let privacyView = Bundle.main.loadNibNamed("PrivacyView", owner: self, options: nil)?.first as! PrivacyView
+
+        privacyView.frame = self.view.frame
+                let colors = BlogColors()
+                let backgroundLayer = colors.gl
+                backgroundLayer?.frame = self.view.frame
+                privacyView.layer.insertSublayer(backgroundLayer!, at: 0)
+        window?.addSubview(privacyView)
     }
 
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {

@@ -54,6 +54,9 @@
 		BDC049CB23357EE900E76E4A /* PlayerDetailsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDC049C623357EE900E76E4A /* PlayerDetailsView.xib */; };
 		BDDB846C237F56EF00B6FA5A /* UIApplication+TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDB846B237F56EF00B6FA5A /* UIApplication+TopViewController.swift */; };
 		BDDB846E23849ABC00B6FA5A /* goalTips.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDB846D23849ABC00B6FA5A /* goalTips.swift */; };
+		BDDB84742384B0D100B6FA5A /* PrivacyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDB84732384B0D100B6FA5A /* PrivacyView.swift */; };
+		BDDB84762384B15B00B6FA5A /* PrivacyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDDB84752384B15B00B6FA5A /* PrivacyView.xib */; };
+		BDDB84782384B32500B6FA5A /* PrivacyPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDB84772384B32500B6FA5A /* PrivacyPolicy.swift */; };
 		BDF3B7682345755400F6906E /* GoalsSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDF3B7672345755400F6906E /* GoalsSB.storyboard */; };
 		BDF3B76A2345757A00F6906E /* GoalsSBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF3B7692345757A00F6906E /* GoalsSBViewController.swift */; };
 		BDFCBBAD234685E500447250 /* NewGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFCBBAC234685E500447250 /* NewGoalViewController.swift */; };
@@ -110,6 +113,9 @@
 		BDC049C623357EE900E76E4A /* PlayerDetailsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerDetailsView.xib; sourceTree = "<group>"; };
 		BDDB846B237F56EF00B6FA5A /* UIApplication+TopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+TopViewController.swift"; sourceTree = "<group>"; };
 		BDDB846D23849ABC00B6FA5A /* goalTips.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = goalTips.swift; sourceTree = "<group>"; };
+		BDDB84732384B0D100B6FA5A /* PrivacyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyView.swift; sourceTree = "<group>"; };
+		BDDB84752384B15B00B6FA5A /* PrivacyView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PrivacyView.xib; sourceTree = "<group>"; };
+		BDDB84772384B32500B6FA5A /* PrivacyPolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicy.swift; sourceTree = "<group>"; };
 		BDF3B7672345755400F6906E /* GoalsSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GoalsSB.storyboard; sourceTree = "<group>"; };
 		BDF3B7692345757A00F6906E /* GoalsSBViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsSBViewController.swift; sourceTree = "<group>"; };
 		BDFCBBAC234685E500447250 /* NewGoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewGoalViewController.swift; sourceTree = "<group>"; };
@@ -184,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				BD567924232328B0000D0C02 /* Blog.swift */,
+				BDDB84772384B32500B6FA5A /* PrivacyPolicy.swift */,
 				BDDB846D23849ABC00B6FA5A /* goalTips.swift */,
 				BD5679322328B3A5000D0C02 /* Meditation.swift */,
 				BD56795823332191000D0C02 /* Episode.swift */,
@@ -197,6 +204,8 @@
 			children = (
 				BD5679272323377B000D0C02 /* BlogCell.xib */,
 				BD56792923280AF0000D0C02 /* BlogCell.swift */,
+				BDDB84752384B15B00B6FA5A /* PrivacyView.xib */,
+				BDDB84732384B0D100B6FA5A /* PrivacyView.swift */,
 				BD56795C2333D80C000D0C02 /* BlogDetailView.xib */,
 				BD56795E23341B25000D0C02 /* BlogDetailView.swift */,
 				BD56792E2328B19B000D0C02 /* MeditationCell.xib */,
@@ -328,6 +337,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDDB84762384B15B00B6FA5A /* PrivacyView.xib in Resources */,
 				BD0F8DC1232098B600ACCAC0 /* LaunchScreen.storyboard in Resources */,
 				BDF3B7682345755400F6906E /* GoalsSB.storyboard in Resources */,
 				BDC049C723357EE900E76E4A /* EpisodeTableViewCell.xib in Resources */,
@@ -418,6 +428,7 @@
 				BD0F8DB9232098B500ACCAC0 /* BlogViewController.swift in Sources */,
 				BD56792A23280AF0000D0C02 /* BlogCell.swift in Sources */,
 				BD56795F23341B25000D0C02 /* BlogDetailView.swift in Sources */,
+				BDDB84742384B0D100B6FA5A /* PrivacyView.swift in Sources */,
 				BD0F8DB7232098B500ACCAC0 /* AppDelegate.swift in Sources */,
 				BDDB846C237F56EF00B6FA5A /* UIApplication+TopViewController.swift in Sources */,
 				BD56791A2320BB6E000D0C02 /* MeditationViewController.swift in Sources */,
@@ -430,6 +441,7 @@
 				BDBEC0B22343DD7700FB1DAF /* GoalDetailView.swift in Sources */,
 				BDBEC0AA23429E1200FB1DAF /* GoalsTableViewController.swift in Sources */,
 				BD56795923332191000D0C02 /* Episode.swift in Sources */,
+				BDDB84782384B32500B6FA5A /* PrivacyPolicy.swift in Sources */,
 				BD567957233320BC000D0C02 /* UIApplication.swift in Sources */,
 				BDBEC0A42342889F00FB1DAF /* EOS.xcdatamodeld in Sources */,
 				BD567954233320BC000D0C02 /* UserDefaults.swift in Sources */,
