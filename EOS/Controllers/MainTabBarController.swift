@@ -61,7 +61,7 @@ class MainTabBarController: UITabBarController {
         
         let shopController = UINavigationController(rootViewController: ShopViewController())
         shopController.tabBarItem.title = "More"
-        shopController.tabBarItem.image = #imageLiteral(resourceName: "shop")
+        shopController.tabBarItem.image = #imageLiteral(resourceName: "More")
         shopController.tabBarItem.imageInsets = UIEdgeInsets(top: 1, left: 0, bottom: -1, right: 0)
         
         UITabBarItem.appearance().titlePositionAdjustment = UIOffset(horizontal: 0, vertical: 1)
