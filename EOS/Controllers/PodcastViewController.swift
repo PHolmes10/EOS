@@ -9,9 +9,7 @@
 import UIKit
 
 class PodcastViewController: UITableViewController {
-    
-    var wasOpened = false
-    
+        
     var podcasts: [Podcast] = []
     var episodes: [Episode] = []
 
@@ -40,7 +38,7 @@ class PodcastViewController: UITableViewController {
 //        backgroundLayer?.frame = view.frame
 //        view.layer.insertSublayer(backgroundLayer!, at: 0)
         
-        
+//        NotificationCenter.default.post(name: .audioOpened, object: nil)
         
         
         findPodcast()
@@ -102,10 +100,7 @@ class PodcastViewController: UITableViewController {
         let mainTabBarController = UIApplication.shared.keyWindow?.rootViewController as? MainTabBarController
         mainTabBarController?.maximizePlayerDetails(episode: episode, playlistEpisodes: self.episodes)
         
-        wasOpened = true
-        
     }
-
 
     fileprivate func showBadgeHighlight() {
         UIApplication.mainTabBarController()?.viewControllers?[1].tabBarItem.badgeValue = "New"

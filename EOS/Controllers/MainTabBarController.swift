@@ -185,13 +185,6 @@ extension MainTabBarController: UITabBarControllerDelegate {
         let subView = tabBar.subviews[index!+1].subviews.first as! UIImageView
         self.performSpringAnimation(imgView: subView)
         
-        
-        
-//        if (index == 1 || index == 3) {
-//            wasOpened = true
-//        }
-        
-        
         // TabBarItems Circle Effect
 //        let index1 = -(tabBar.items?.firstIndex(of: item)?.distance(to: 0))!
 //        let frame = frameForTabAtIndex(index: index1)

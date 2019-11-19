@@ -52,6 +52,7 @@
 		BDC049C923357EE900E76E4A /* PlayerDetailsView+Gestures.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC049C423357EE900E76E4A /* PlayerDetailsView+Gestures.swift */; };
 		BDC049CA23357EE900E76E4A /* PlayerDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC049C523357EE900E76E4A /* PlayerDetailsView.swift */; };
 		BDC049CB23357EE900E76E4A /* PlayerDetailsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDC049C623357EE900E76E4A /* PlayerDetailsView.xib */; };
+		BDDB846C237F56EF00B6FA5A /* UIApplication+TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDB846B237F56EF00B6FA5A /* UIApplication+TopViewController.swift */; };
 		BDF3B7682345755400F6906E /* GoalsSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDF3B7672345755400F6906E /* GoalsSB.storyboard */; };
 		BDF3B76A2345757A00F6906E /* GoalsSBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF3B7692345757A00F6906E /* GoalsSBViewController.swift */; };
 		BDFCBBAD234685E500447250 /* NewGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFCBBAC234685E500447250 /* NewGoalViewController.swift */; };
@@ -106,6 +107,7 @@
 		BDC049C423357EE900E76E4A /* PlayerDetailsView+Gestures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PlayerDetailsView+Gestures.swift"; sourceTree = "<group>"; };
 		BDC049C523357EE900E76E4A /* PlayerDetailsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerDetailsView.swift; sourceTree = "<group>"; };
 		BDC049C623357EE900E76E4A /* PlayerDetailsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerDetailsView.xib; sourceTree = "<group>"; };
+		BDDB846B237F56EF00B6FA5A /* UIApplication+TopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+TopViewController.swift"; sourceTree = "<group>"; };
 		BDF3B7672345755400F6906E /* GoalsSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GoalsSB.storyboard; sourceTree = "<group>"; };
 		BDF3B7692345757A00F6906E /* GoalsSBViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsSBViewController.swift; sourceTree = "<group>"; };
 		BDFCBBAC234685E500447250 /* NewGoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewGoalViewController.swift; sourceTree = "<group>"; };
@@ -243,6 +245,7 @@
 			children = (
 				BD56794B233320BC000D0C02 /* CMTime.swift */,
 				BD56794E233320BC000D0C02 /* Constants.swift */,
+				BDDB846B237F56EF00B6FA5A /* UIApplication+TopViewController.swift */,
 				BD56794F233320BC000D0C02 /* ReuseIdentifier.swift */,
 				BD56794A233320BB000D0C02 /* RSSFeed.swift */,
 				BD567950233320BC000D0C02 /* UIApplication.swift */,
@@ -412,6 +415,7 @@
 				BD56792A23280AF0000D0C02 /* BlogCell.swift in Sources */,
 				BD56795F23341B25000D0C02 /* BlogDetailView.swift in Sources */,
 				BD0F8DB7232098B500ACCAC0 /* AppDelegate.swift in Sources */,
+				BDDB846C237F56EF00B6FA5A /* UIApplication+TopViewController.swift in Sources */,
 				BD56791A2320BB6E000D0C02 /* MeditationViewController.swift in Sources */,
 				BD0F8DC923209AB200ACCAC0 /* MainTabBarController.swift in Sources */,
 				BDC049CA23357EE900E76E4A /* PlayerDetailsView.swift in Sources */,

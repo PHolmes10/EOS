@@ -12,13 +12,13 @@ import AVKit
 import MediaPlayer
 
 class PlayerDetailsView: UIView {
-    
+
   var episode: Episode! {
     didSet {
       titleLabel.text = episode.title
       miniTitleLabel.text = episode.title
       authorLabel.text = episode.author
-
+        
       setupNowPlayingInfo()
         
       playEpisode()
@@ -123,6 +123,7 @@ class PlayerDetailsView: UIView {
     do {
       try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playback, mode: .default)
       try AVAudioSession.sharedInstance().setActive(true)
+        
     } catch let sessionErr {
       print("Failed to activate session:", sessionErr)
     }
@@ -230,13 +231,19 @@ class PlayerDetailsView: UIView {
 
   override func awakeFromNib() {
     super.awakeFromNib()
-
+    
     setupRemoteControl()
     setupAudioSession()
     setupGestures()
     setupInterruptionObserver()
     observePlayerCurrentTime()
     observeBoundaryTime()
+    
+    NotificationCenter.default.addObserver(forName: .audioOpened, object: nil, queue: nil) { (notification) in
+                
+        UIApplication.mainTabBarController()?.minimizePlayerDetails()
+        
+    }
   }
 
   fileprivate func setupInterruptionObserver() {

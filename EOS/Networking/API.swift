@@ -15,6 +15,7 @@ extension Notification.Name {
 
     static let downloadProgress = NSNotification.Name("downloadProgress")
     static let downloadComplete = NSNotification.Name("downloadComplete")
+    static let audioOpened = NSNotification.Name("audioOpened")
 }
 
 var podcastTerm:String = "evolution of success"
